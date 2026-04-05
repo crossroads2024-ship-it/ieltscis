@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500&amp;family=Inter:wght@400;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#88d982",
+                        "secondary-container": "#a0f399",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde3ee",
+                        "on-primary-container": "#b2bfff",
+                        "surface-container-high": "#e3e8f4",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#2f53ce",
+                        "primary-container": "#1a43bf",
+                        "inverse-primary": "#b7c4ff",
+                        "inverse-on-surface": "#ecf1fc",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001453",
+                        "on-background": "#161c24",
+                        "tertiary": "#004317",
+                        "on-surface": "#161c24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eef4ff",
+                        "on-secondary-fixed": "#002204",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-bright": "#f8f9ff",
+                        "outline": "#747685",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#e9eef9",
+                        "primary": "#002c98",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-tertiary-container": "#35de66",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "secondary": "#1b6d24",
+                        "outline-variant": "#c4c5d6",
+                        "on-secondary-container": "#217128",
+                        "on-surface-variant": "#444654",
+                        "surface-variant": "#dde3ee",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "surface-dim": "#d5dae5",
+                        "on-tertiary-fixed": "#002108",
+                        "tertiary-container": "#005d22",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "inverse-surface": "#2b3139"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        .glass-header {
+            backdrop-filter: blur(20px);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface font-body text-on-surface antialiased">
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/80 backdrop-blur-xl scholar-shadow flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary/10">
+<img class="w-full h-full object-cover" data-alt="Close-up portrait of a young male student looking confident and friendly in a bright campus setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAeMolcLdjLz_7sZ7nsLkdtjr151JegyfNNRO_wcGeK7bS9E8TkgDZK5laCxFJgNJjXSeUWFZYSs3htENwjGs4UNNfhyVwxZuyDr2X1fbqndSmJU8NXwZXsYI1m7LtTr67i_pDRUnSKP8wNrz4ykhyIZae2H7iE1C6pcQGrz1piFjkCkBCPVa9ZOdXStZ8CEOUVCD70BmqPtTovUPbdUOjeA4pFkq3TSxcGJjaNB_-ExLX71Xc8Ku-n-18By86tnMUWE9VgRfEEMEg"/>
+</div>
+<span class="text-xl font-extrabold text-primary uppercase tracking-widest font-headline">Academic Architect</span>
+</div>
+<button class="material-symbols-outlined text-on-surface hover:opacity-80 transition-opacity">settings</button>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-4xl mx-auto min-h-screen">
+<section class="flex flex-col gap-8" id="matchmaking-view">
+<div class="space-y-2">
+<h1 class="text-3xl font-bold font-headline tracking-tight text-primary">Mentor Matching</h1>
+<p class="text-on-surface-variant font-body">Connect with Band 8.5+ experts for real-time writing and speaking guidance.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow flex flex-col items-center text-center gap-6 relative overflow-hidden group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-container"></div>
+<div class="w-20 h-20 rounded-full bg-surface-container-low flex items-center justify-center">
+<span class="material-symbols-outlined text-4xl text-primary" style="font-variation-settings: 'FILL' 1;">psychology_alt</span>
+</div>
+<div class="space-y-2">
+<h3 class="text-xl font-bold font-headline">Instant Guidance</h3>
+<p class="text-sm text-on-surface-variant">Get matched with a Level 5 mentor currently online. Average wait time: 45s.</p>
+</div>
+<button class="w-full py-4 px-8 bg-gradient-to-tr from-primary to-primary-container text-white rounded-full font-bold shadow-lg hover:opacity-90 active:scale-95 transition-all">
+                        Find a Mentor
+                    </button>
+</div>
+<div class="bg-surface-container-low p-8 rounded-3xl flex flex-col gap-6">
+<h3 class="font-bold font-headline text-primary-container flex items-center gap-2">
+<span class="material-symbols-outlined text-xl">insights</span>
+                        Active Mentors
+                    </h3>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Professional headshot of a female mentor with a warm smile, corporate setting background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAjcw6vvCrLHGFnc1AJZjNNCWKqItb9760baPCXwXXmygjfDDcNPQkrjVMxcdgaHWRvIUrw5rXBBA1nwh2_k6uahWxC_Y29O-pYSROjaB0k4oNuLUOy5w6eNiwM3PIyiVtIacgnYDHS72qI8a3GPXfnNgdGKIjr2ZLyo3C7awB-b__WAneLmqdf4doeicThgd37PvV6f1zVbHTxUH9h9XPeFNasQXj8OgXH-2BkdqaFbtrwVWW7MUqDTEOWyhhjL9JMZ_Oxo6mSVGQ"/>
+<div>
+<p class="text-sm font-bold">Sarah L.</p>
+<p class="text-[10px] text-secondary font-semibold uppercase tracking-tighter">Level 5 Mentor</p>
+</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant px-2 py-1 bg-surface-container rounded-lg">Speaking Expert</span>
+</div>
+<div class="flex items-center justify-between p-3 bg-surface-container-lowest rounded-2xl">
+<div class="flex items-center gap-3">
+<img class="w-10 h-10 rounded-full object-cover" data-alt="Portrait of a male educator in a library, wearing glasses and a smart casual outfit" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6mVZYNl0IB77UqKENk2QTTw4BmofT8Y-3gEoPR5N158egRSsGudifkK_qJ1NwKGJNECU8Lb_kNhSHymhGNEnzyIxSC2ArhRxDWkQLI1F9PZjruALQKlrxUox6sHaflDN7jY15h8FaMWw1rw6iN4pngM7X31nU2B2sSGjab-rsvWa6RdkDCp3QcEIIP23GvrYpb7vHIspizGXPNE9Hp8zQ8N1G3hr3vHl05jxfo4Nabs-dC0P3TM0oRpqipn3jJPC1PlqrK-nVDRk"/>
+<div>
+<p class="text-sm font-bold">David K.</p>
+<p class="text-[10px] text-secondary font-semibold uppercase tracking-tighter">Level 4 Mentor</p>
+</div>
+</div>
+<span class="text-xs font-medium text-on-surface-variant px-2 py-1 bg-surface-container rounded-lg">Writing Task 2</span>
+</div>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-8 relative overflow-hidden">
+<div class="absolute -right-8 -bottom-8 opacity-10">
+<span class="material-symbols-outlined text-[160px] text-primary">groups</span>
+</div>
+<div class="max-w-md space-y-4">
+<h2 class="text-2xl font-bold font-headline leading-tight">Your Scholarly Path</h2>
+<p class="text-on-surface-variant text-sm leading-relaxed">Level 1-3 learners receive priority matching during peak study hours. Level 5 mentors are dedicated to accelerating your journey to Band 7.5+.</p>
+<div class="flex gap-4">
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-primary font-headline">12</span>
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">Sessions</span>
+</div>
+<div class="w-px h-10 bg-outline-variant opacity-30"></div>
+<div class="flex flex-col">
+<span class="text-2xl font-bold text-secondary font-headline">8.5</span>
+<span class="text-[10px] font-label text-on-surface-variant uppercase tracking-widest">Target Band</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="hidden flex flex-col gap-6 h-[618px]" id="chat-view">
+<div class="flex items-center justify-between bg-surface-container-low p-4 rounded-2xl">
+<div class="flex items-center gap-3">
+<div class="relative">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="Close-up profile of a professional female academic advisor" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBjbiWZvQRDT1gevi43gNM8qaxaAahZuyvZSoVzT4ZUWLpjVYdxsxY_EBrud2D2Nc4bTYAj2HoOCI1bkwIODBMllO_t_gI-8uh83ERdq7rzpPgXDS7Wt9eiUFR5Ee5lDB1KKAav8JhmrjpJ3mUC9knypAiJOlfG-K4uoA7U8WopdPvCIi17UTa8WCv0JvGT1vmDFJxR9bh0SYtXwuViodAK17jdGrmjIrIKTd4veBOvSgcir0IvPupJvPaJObG2IaR1gRyjhMtOQmg"/>
+<div class="absolute bottom-0 right-0 w-3 h-3 bg-secondary rounded-full border-2 border-surface-container-low"></div>
+</div>
+<div>
+<h4 class="font-bold">Mentor Sarah</h4>
+<p class="text-xs text-secondary font-medium">IELTS Writing Expert • Active Now</p>
+</div>
+</div>
+<button class="material-symbols-outlined text-on-surface-variant p-2 hover:bg-surface-container rounded-full">more_vert</button>
+</div>
+<div class="flex-grow overflow-y-auto space-y-6 py-4 scrollbar-hide">
+<div class="flex flex-col gap-2 max-w-[80%]">
+<div class="bg-surface-container p-4 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl">
+<p class="text-sm">Hello! I see you're working on your Writing Task 2. How can I help you improve your coherence and cohesion today?</p>
+</div>
+<span class="text-[10px] font-label text-on-surface-variant px-1 uppercase">10:42 AM</span>
+</div>
+<div class="flex flex-col gap-2 max-w-[80%] self-end items-end">
+<div class="bg-primary text-white p-4 rounded-tl-2xl rounded-bl-2xl rounded-br-2xl scholar-shadow">
+<p class="text-sm">Hi Sarah. I'm struggling with transition words. My paragraphs feel a bit disconnected.</p>
+</div>
+<span class="text-[10px] font-label text-on-surface-variant px-1 uppercase">10:43 AM</span>
+</div>
+<div class="flex flex-col gap-2 max-w-[80%]">
+<div class="bg-surface-container-low p-4 rounded-tr-2xl rounded-br-2xl rounded-bl-2xl border-l-4 border-secondary">
+<p class="text-sm font-medium text-secondary mb-1">Scholar Tip:</p>
+<p class="text-sm">Instead of 'Secondly', try using 'Furthermore' or 'In addition' to create a more academic flow. Let's practice with your last paragraph.</p>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-full scholar-shadow flex items-center gap-2">
+<button class="material-symbols-outlined text-primary p-2">add_circle</button>
+<input class="flex-grow bg-transparent border-none focus:ring-0 text-sm font-body" placeholder="Type your academic question..." type="text"/>
+<button class="w-10 h-10 bg-primary text-white rounded-full flex items-center justify-center scholar-shadow active:scale-95 transition-transform">
+<span class="material-symbols-outlined">send</span>
+</button>
+</div>
+</section>
+</main>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-6 pt-2 bg-white/90 backdrop-blur-2xl z-50 rounded-t-[1.5rem] scholar-shadow">
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Sanctuary</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#002c98] to-[#1a43bf] text-white rounded-full p-3 mb-1 shadow-lg active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="psychology_alt" style="font-variation-settings: 'FILL' 1;">psychology_alt</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Mentor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="mic_external_on">mic_external_on</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Speech</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="insights">insights</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Stats</span>
+</a>
+</nav>
+</body></html>

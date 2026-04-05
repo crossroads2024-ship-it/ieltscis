@@ -1,0 +1,66 @@
+# Technical PRD: Transitioning to Telegram Mini App (TMA)
+
+## 1. Overview
+The goal is to wrap the existing IELTS Marathon ecosystem into a **Telegram Mini App (TMA)**. This allows students to access the high-fidelity dashboards (Analytics, Community Feed, Lessons) directly within Telegram without leaving the chat interface.
+
+## 2. Technical Stack for TMA
+*   **Frontend:** React (Vite) + Tailwind CSS (using your existing Scholar Pulse Design System).
+*   **Bridge:** [Telegram Web App SDK](https://core.telegram.org/bots/webapps) (`@twa-dev/sdk`).
+*   **Backend:** Existing FastAPI + PostgreSQL (Supabase) + Redis.
+*   **Authentication:** Telegram InitData validation (verifying the `hash` sent by Telegram against your `BOT_TOKEN`).
+
+## 3. Core Implementation Steps
+
+### Step 1: Frontend Wrapper & SDK Integration
+Install the Telegram SDK to allow the web app to communicate with the Telegram client (e.g., closing the app, triggering haptics, or reading user theme colors).
+```javascript
+import WebApp from '@twa-dev/sdk';
+
+// Expand the app to full screen
+WebApp.expand();
+
+// Match Telegram's theme
+const theme = WebApp.colorScheme; // 'light' or 'dark'
+```
+
+### Step 2: Secure Authentication Bridge
+Every request from the TMA to the FastAPI backend must include the `initData` string in the headers.
+```python
+# backend/auth/telegram.py
+import hmac
+import hashlib
+
+def verify_telegram_data(init_data: str, bot_token: str):
+    # Logic to verify the hash using the bot_token
+    # This ensures the request is actually coming from YOUR Mini App
+    pass
+```
+
+### Step 3: Handling Navigation (Bot <-> Mini App)
+Replace standard bot commands with "Menu Buttons" or "Keyboard Buttons" that open the Mini App.
+```python
+# bot/handlers/start.py
+from aiogram.types import WebAppInfo, InlineKeyboardButton, InlineKeyboardMarkup
+
+keyboard = InlineKeyboardMarkup(inline_keyboard=[
+    [InlineKeyboardButton(text="Open Marathon Dashboard", web_app=WebAppInfo(url="https://marathon-tma.vercel.app"))]
+])
+```
+
+## 4. Feature Mapping to TMA
+| Feature | Telegram Bot (Old) | Telegram Mini App (New) |
+| :--- | :--- | :--- |
+| **Lesson Delivery** | PDF/Audio Files in chat | Interactive "Lesson Player" with embedded audio & PDF viewer |
+| **Homework** | Text-based questions | Interactive "Refined Homework Module" with auto-grading |
+| **Speech Analytics** | Static images or text summary | "Speech Analytics Dashboard" with interactive charts |
+| **Community** | Text list via commands | "Community Feed" with infinite scroll & like buttons |
+
+## 5. Security & IP Protection (TMA Edition)
+*   **Data Masking:** Render sensitive lesson text using the `user-select: none` CSS property.
+*   **Anti-Scraping:** Use the Telegram `user_id` as a unique identifier for session-based rate limiting.
+*   **Media Protection:** Serve audio through signed URLs that expire after 60 seconds, generated only when the user hits "Play" in the TMA.
+
+## 6. Deployment Workflow
+1.  **Host Frontend:** Deploy the React app to Vercel/Netlify.
+2.  **Configure BotFather:** Set the `Menu Button` URL in @BotFather to your hosted URL.
+3.  **Environment Sync:** Ensure your Backend CORS policy allows requests from your TMA domain.

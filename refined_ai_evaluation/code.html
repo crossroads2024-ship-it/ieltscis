@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-lowest": "#ffffff",
+                    "surface-container-high": "#e3e8f4",
+                    "primary-container": "#1a43bf",
+                    "outline": "#747685",
+                    "on-surface-variant": "#444654",
+                    "on-tertiary-fixed": "#002108",
+                    "background": "#f8f9ff",
+                    "secondary-container": "#a0f399",
+                    "on-secondary-fixed": "#002204",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface-container-low": "#eef4ff",
+                    "on-error-container": "#93000a",
+                    "on-error": "#ffffff",
+                    "secondary": "#1b6d24",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-secondary-container": "#217128",
+                    "inverse-primary": "#b7c4ff",
+                    "tertiary-fixed": "#69ff87",
+                    "outline-variant": "#c4c5d6",
+                    "on-tertiary": "#ffffff",
+                    "inverse-on-surface": "#ecf1fc",
+                    "on-surface": "#161c24",
+                    "tertiary": "#004317",
+                    "surface-tint": "#2f53ce",
+                    "primary": "#002c98",
+                    "on-primary-container": "#b2bfff",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "surface-dim": "#d5dae5",
+                    "on-tertiary-container": "#35de66",
+                    "surface-bright": "#f8f9ff",
+                    "on-primary-fixed-variant": "#0438b6",
+                    "surface": "#f8f9ff",
+                    "on-background": "#161c24",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "tertiary-container": "#005d22",
+                    "surface-container-highest": "#dde3ee",
+                    "surface-container": "#e9eef9",
+                    "secondary-fixed-dim": "#88d982",
+                    "surface-variant": "#dde3ee",
+                    "secondary-fixed": "#a3f69c",
+                    "primary-fixed": "#dde1ff",
+                    "on-secondary": "#ffffff",
+                    "on-primary-fixed": "#001453",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2b3139",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "2xl": "1rem",
+                    "3xl": "1.5rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        body {
+            background-color: #f8f9ff;
+            color: #161c24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body selection:bg-primary-fixed selection:text-on-primary-fixed">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#eef4ff] scholar-shadow">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="text-[#002c98] active:scale-95 duration-200 transition-opacity hover:opacity-80">
+<span class="material-symbols-outlined">menu</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight text-[#002c98]">IELTS Marathon</h1>
+</div>
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden active:scale-95 duration-200 cursor-pointer">
+<img alt="Scholar Profile" class="w-full h-full object-cover" data-alt="Close up portrait of a young male student wearing glasses, soft library lighting, professional academic atmosphere" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFDzNTqtlBh63BHtSzAZhQFDWleocXFj8ynIFyAcR8wKKP003xnO_cnqADhpHxDKxY1WqVN23sGWLue540gOIEILeaA6FHuXBxpB_89jvpkn4_DGDSi2DbprPX8Q9UWbgp5aS1tuShBbjv9wZUauX6BNs6ejg6My8yS9rZaq7mf5vXs7P9CDFDJnWm3JSU2Euc6BZ6e2iSyQYF_685cuMzmtb6PI7tHItfNPJIHTg38BwHYIw382Re21mTphNG5tCyAhjxPzeWE_o"/>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-4xl mx-auto px-6 pt-8 pb-32">
+<!-- Hero Section: Overall Score -->
+<section class="mb-12">
+<div class="bg-surface-container-low rounded-3xl p-8 md:p-12 relative overflow-hidden flex flex-col md:flex-row items-center gap-10">
+<!-- Background Decoration -->
+<div class="absolute top-0 right-0 w-64 h-64 bg-primary-container/5 rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="relative z-10 flex-shrink-0">
+<div class="w-32 h-32 md:w-44 md:h-44 rounded-full bg-gradient-to-br from-primary to-primary-container flex flex-col items-center justify-center text-white scholar-shadow">
+<span class="font-headline font-extrabold text-5xl md:text-7xl leading-none">7.5</span>
+<span class="font-label text-xs md:text-sm uppercase tracking-widest mt-1 opacity-80">Band Score</span>
+</div>
+</div>
+<div class="relative z-10 text-center md:text-left">
+<div class="flex items-center justify-center md:justify-start gap-2 mb-3">
+<div class="flex gap-0.5 text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0.5;">star_half</span>
+</div>
+<span class="font-label text-xs font-semibold text-secondary uppercase tracking-wider">High Achievement</span>
+</div>
+<h2 class="font-headline font-bold text-2xl md:text-3xl mb-4 text-on-surface">Excellent academic command.</h2>
+<p class="text-on-surface-variant leading-relaxed text-lg italic max-w-lg">
+                        "Your writing demonstrates a sophisticated grasp of complex ideas. You've balanced technical precision with a natural flow that is rare at this level. Focus on minor grammatical nuances to push toward a Band 8.0."
+                    </p>
+<div class="mt-6 flex items-center gap-3 justify-center md:justify-start">
+<div class="w-8 h-8 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Examiner" class="w-full h-full object-cover" data-alt="Portrait of a mature, professional academic man in a suit, soft warm lighting, blurred library background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDXP4ss8bo4P_pSmQvTMoFo9ahSCClMZlczBydg9FtL07haS2a-qhj6Ch40mY07--hJfdOpEnTiHGYky-XpGf8ccZxPhT39xR9oRg0iFp8DZqiHFP--LoZ19XoOXBPq1ZBMajcZYaExwJf9gpr5-JM7AYgP_O8LY9Hu48z_qyU7Zg3Zv5-_Yi04OFtWMlAsKLxUXJ-GbgpsjGsUFflSIy-vXlNYWDTyf397giq5wll5UfxNUBOg5hC4pOnF2rQQMoPqGJdcYZEyjlU"/>
+</div>
+<span class="font-label text-sm font-medium text-outline">Dr. Julian Vance, Senior Examiner</span>
+</div>
+</div>
+</div>
+</section>
+<!-- Detailed Breakdown: Bento Grid Layout -->
+<section class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+<!-- Task Response -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow border-t-4 border-secondary/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Task Response</h3>
+<p class="font-label text-xs text-outline uppercase tracking-widest mt-1">Full address of prompt</p>
+</div>
+<span class="font-headline font-extrabold text-2xl text-secondary">8.0</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">The response covers all parts of the task with a very clear central position.</p>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">Main ideas are fully developed and supported with relevant examples.</p>
+</li>
+</ul>
+</div>
+<!-- Coherence & Cohesion -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow border-t-4 border-primary/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Coherence</h3>
+<p class="font-label text-xs text-outline uppercase tracking-widest mt-1">Logical flow &amp; Linking</p>
+</div>
+<span class="font-headline font-extrabold text-2xl text-primary">7.5</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">Information is sequenced logically throughout the essay.</p>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-error text-lg mt-0.5">error</span>
+<p class="text-sm text-on-surface-variant">Some overuse of standard cohesive devices like "Furthermore" and "In addition."</p>
+</li>
+</ul>
+</div>
+<!-- Lexical Resource -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow border-t-4 border-primary/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Lexical Resource</h3>
+<p class="font-label text-xs text-outline uppercase tracking-widest mt-1">Vocabulary range</p>
+</div>
+<span class="font-headline font-extrabold text-2xl text-primary">7.0</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">Uses a wide range of vocabulary with very few spelling errors.</p>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-error text-lg mt-0.5">error</span>
+<p class="text-sm text-on-surface-variant">Could improve use of less common lexical items and precise collocations.</p>
+</li>
+</ul>
+</div>
+<!-- Grammatical Range -->
+<div class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow border-t-4 border-secondary/20">
+<div class="flex justify-between items-start mb-6">
+<div>
+<h3 class="font-headline font-bold text-xl text-on-surface">Grammar</h3>
+<p class="font-label text-xs text-outline uppercase tracking-widest mt-1">Accuracy &amp; Complexity</p>
+</div>
+<span class="font-headline font-extrabold text-2xl text-secondary">7.5</span>
+</div>
+<ul class="space-y-4">
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">Frequent error-free sentences with complex structures.</p>
+</li>
+<li class="flex gap-3 items-start">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5">check_circle</span>
+<p class="text-sm text-on-surface-variant">Good control of punctuation and tense consistency.</p>
+</li>
+</ul>
+</div>
+</section>
+<!-- Examiner's Suggestions -->
+<section class="bg-surface-container-high rounded-3xl p-8 md:p-10 mb-12">
+<div class="flex items-center gap-3 mb-8">
+<span class="material-symbols-outlined text-primary text-3xl">lightbulb_circle</span>
+<h3 class="font-headline font-bold text-2xl text-on-surface">Examiner's Suggestions</h3>
+</div>
+<div class="space-y-8">
+<div class="flex flex-col md:flex-row gap-6">
+<div class="flex-1 bg-surface-container-lowest rounded-2xl p-6">
+<h4 class="font-headline font-bold text-primary mb-3">Refine Collocations</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">You frequently use the word "big" or "large." Consider academic alternatives that convey specific nuances.</p>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between">
+<span class="text-outline line-through text-xs">big change</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="text-secondary font-medium text-xs">substantial shift</span>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest rounded-2xl p-6">
+<h4 class="font-headline font-bold text-primary mb-3">Subtle Cohesion</h4>
+<p class="text-on-surface-variant text-sm leading-relaxed mb-4">Instead of starting every paragraph with a transition word, try using reference pronouns or thematic links.</p>
+<div class="bg-surface-container-low p-4 rounded-xl flex items-center justify-between">
+<span class="text-outline line-through text-xs">Furthermore...</span>
+<span class="material-symbols-outlined text-outline text-sm">arrow_forward</span>
+<span class="text-secondary font-medium text-xs">This evolution...</span>
+</div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-6 border-l-4 border-primary">
+<p class="text-on-surface italic text-base leading-relaxed">
+                        "Your current trajectory is excellent. To reach Band 8.0, focus on making your transitions feel more natural and integrated into the sentence structure rather than 'bolted on' at the beginning."
+                    </p>
+</div>
+<div class="flex justify-center pt-4">
+<button class="bg-primary hover:bg-primary-container text-on-primary px-8 py-4 rounded-full font-headline font-bold tracking-wide transition-all transform active:scale-95 scholar-shadow flex items-center gap-2">
+<span>PRACTICE TARGETED TASKS</span>
+<span class="material-symbols-outlined">trending_up</span>
+</button>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-[#0a0b10]/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-xl">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Lessons</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Homework</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#002c98] dark:text-[#4d7cff] bg-[#eef4ff] dark:bg-[#1a2333] rounded-xl px-4 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Progress</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</nav>
+</body></html>

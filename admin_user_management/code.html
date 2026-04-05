@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Admin - User Management | IELTS Marathon</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#35de66",
+                    "tertiary-fixed": "#69ff87",
+                    "surface-variant": "#dde3ee",
+                    "surface-container-highest": "#dde3ee",
+                    "on-secondary-container": "#217128",
+                    "surface-container-high": "#e3e8f4",
+                    "on-primary": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "inverse-on-surface": "#ecf1fc",
+                    "surface-bright": "#f8f9ff",
+                    "secondary-container": "#a0f399",
+                    "secondary-fixed": "#a3f69c",
+                    "outline": "#747685",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "primary-fixed": "#dde1ff",
+                    "secondary": "#1b6d24",
+                    "inverse-primary": "#b7c4ff",
+                    "on-surface-variant": "#444654",
+                    "on-secondary-fixed-variant": "#005312",
+                    "surface": "#f8f9ff",
+                    "on-primary-fixed": "#001453",
+                    "secondary-fixed-dim": "#88d982",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-tertiary-fixed": "#002108",
+                    "tertiary-container": "#005d22",
+                    "surface-container-low": "#eef4ff",
+                    "on-primary-fixed-variant": "#0438b6",
+                    "on-secondary": "#ffffff",
+                    "on-background": "#161c24",
+                    "on-surface": "#161c24",
+                    "on-secondary-fixed": "#002204",
+                    "inverse-surface": "#2b3139",
+                    "on-tertiary": "#ffffff",
+                    "error": "#ba1a1a",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "error-container": "#ffdad6",
+                    "on-primary-container": "#b2bfff",
+                    "surface-container-lowest": "#ffffff",
+                    "background": "#f8f9ff",
+                    "outline-variant": "#c4c5d6",
+                    "primary": "#002c98",
+                    "surface-container": "#e9eef9",
+                    "primary-container": "#1a43bf",
+                    "surface-dim": "#d5dae5",
+                    "tertiary": "#004317",
+                    "surface-tint": "#2f53ce"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": [
+                            "Manrope"
+                    ],
+                    "body": [
+                            "Public Sans"
+                    ],
+                    "label": [
+                            "Inter"
+                    ]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9ff;
+            color: #161c24;
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface antialiased">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-[#f8f9ff] scholar-shadow">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center">
+<img alt="Student Profile Photo" class="w-full h-full object-cover" data-alt="portrait of a focused university student with glasses in a library setting, soft cinematic lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxlEwH5hRU9aJOo_Q6CwbA1GWd7njq433W1jF7jn-hUOxkGwgWmjAjGXwcbM6dvSa7xq-nnbuDbZ--0j1H_D7ETOOVT1EbQ7nFCtMNhAFzD1j-_o-UtevzHipjg01pcIGbuC8BxPws3TN6_xQNbqyI8rR5VwyrMzCuulfDDwoPhy-uzhbyrnt2bMH4r9uHlVI0x1McCd0aPVkfgjptnsAY-TnDat_X1mRHUU5xfjIqvr9YkTT3E_N1_WvyQPBbLLxeC6qvVR_C69Q"/>
+</div>
+<span class="font-['Manrope'] font-extrabold text-[#002c98] tracking-tight text-xl">IELTS Marathon</span>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="font-['Inter'] text-sm text-slate-500 hover:bg-[#dde3ee] transition-colors px-3 py-2 rounded-lg" href="#">Portfolio</a>
+<a class="font-['Inter'] text-sm text-slate-500 hover:bg-[#dde3ee] transition-colors px-3 py-2 rounded-lg" href="#">Rewards</a>
+<a class="font-['Inter'] text-sm text-[#002c98] font-bold px-3 py-2 rounded-lg bg-[#eef4ff]" href="#">Admin</a>
+<a class="font-['Inter'] text-sm text-slate-500 hover:bg-[#dde3ee] transition-colors px-3 py-2 rounded-lg" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-2">
+<button class="p-2 rounded-full hover:bg-[#dde3ee] transition-colors">
+<span class="material-symbols-outlined text-[#002c98]">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8 pb-32">
+<!-- Header Section -->
+<div class="mb-10">
+<h1 class="font-headline font-extrabold text-3xl text-primary tracking-tight mb-2">Student Administration</h1>
+<p class="font-body text-on-surface-variant opacity-80">Manage student access, monitor streaks, and track academic performance across the platform.</p>
+</div>
+<!-- Management Tools Bento Grid -->
+<div class="grid grid-cols-1 lg:grid-cols-4 gap-6 mb-8">
+<!-- Search and Filter Card -->
+<div class="lg:col-span-3 bg-surface-container-lowest scholar-shadow rounded-xl p-6 flex flex-col md:flex-row gap-4 items-center">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-outline-variant">search</span>
+<input class="w-full pl-12 pr-4 py-3 bg-surface-container-low border-none rounded-xl focus:ring-2 focus:ring-primary/10 font-body placeholder:text-outline-variant" placeholder="Search by name, ID or email..." type="text"/>
+</div>
+<div class="flex gap-2 w-full md:w-auto shrink-0">
+<button class="flex items-center gap-2 px-5 py-3 bg-surface-container-high text-primary font-semibold rounded-xl hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">lock_open</span>
+<span class="font-label text-sm">Unlocked</span>
+</button>
+<button class="flex items-center gap-2 px-5 py-3 bg-surface-container-low text-on-surface-variant font-medium rounded-xl hover:bg-surface-variant transition-colors">
+<span class="material-symbols-outlined text-sm">lock</span>
+<span class="font-label text-sm">Locked</span>
+</button>
+<button class="flex items-center justify-center p-3 bg-primary text-on-primary rounded-xl scholar-shadow active:scale-95 transition-transform">
+<span class="material-symbols-outlined">filter_list</span>
+</button>
+</div>
+</div>
+<!-- Stats Overview Card -->
+<div class="bg-primary-container scholar-shadow rounded-xl p-6 text-on-primary-container relative overflow-hidden">
+<div class="relative z-10">
+<p class="font-label text-xs uppercase tracking-widest opacity-80 mb-1 text-white">Active Students</p>
+<h2 class="font-headline font-bold text-4xl text-white">1,284</h2>
+<div class="mt-4 flex items-center gap-2 text-sm text-on-tertiary-container font-semibold">
+<span class="material-symbols-outlined text-sm">trending_up</span>
+<span>+12% this month</span>
+</div>
+</div>
+<div class="absolute -right-4 -bottom-4 opacity-10">
+<span class="material-symbols-outlined text-9xl">school</span>
+</div>
+</div>
+</div>
+<!-- Student Table Section -->
+<div class="bg-surface-container-lowest scholar-shadow rounded-2xl overflow-hidden">
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low">
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider">User ID</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider">Student Name</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider">Status</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider text-center">Streak</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider text-right">Total Points</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider">Last Active</th>
+<th class="px-6 py-5 font-headline font-bold text-primary text-sm uppercase tracking-wider"></th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4 font-label text-sm text-outline">#STU-8821</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-secondary-fixed flex items-center justify-center text-on-secondary-fixed font-bold text-xs">JD</div>
+<div>
+<div class="font-semibold text-on-surface">Julianne Devis</div>
+<div class="text-xs text-on-surface-variant">julianne.d@university.edu</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-secondary transition-colors focus:outline-none">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+</button>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>24</span>
+</div>
+<div class="w-16 h-1 bg-surface-container-high rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 80%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-headline font-bold text-primary">12,450</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">2 mins ago</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4 font-label text-sm text-outline">#STU-7492</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-on-primary-fixed font-bold text-xs">MA</div>
+<div>
+<div class="font-semibold text-on-surface">Marcus Aurelius</div>
+<div class="text-xs text-on-surface-variant">m.philosopher@academy.org</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-outline-variant transition-colors focus:outline-none">
+<span class="translate-x-1 inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+</button>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-outline font-bold">
+<span class="material-symbols-outlined text-sm">local_fire_department</span>
+<span>0</span>
+</div>
+<div class="w-16 h-1 bg-surface-container-high rounded-full mt-1"></div>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-headline font-bold text-primary">3,120</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">5 days ago</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4 font-label text-sm text-outline">#STU-9011</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed-dim flex items-center justify-center text-on-tertiary-fixed font-bold text-xs">SK</div>
+<div>
+<div class="font-semibold text-on-surface">Sarah Kinsley</div>
+<div class="text-xs text-on-surface-variant">sarah.k@marathon.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-secondary transition-colors focus:outline-none">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+</button>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>104</span>
+</div>
+<div class="w-16 h-1 bg-surface-container-high rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 100%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-headline font-bold text-primary">45,820</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">Active now</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low transition-colors group">
+<td class="px-6 py-4 font-label text-sm text-outline">#STU-1123</td>
+<td class="px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-variant flex items-center justify-center text-on-surface-variant font-bold text-xs">EL</div>
+<div>
+<div class="font-semibold text-on-surface">Ethan Lee</div>
+<div class="text-xs text-on-surface-variant">ethan.lee@study.com</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4">
+<button class="relative inline-flex h-6 w-11 items-center rounded-full bg-secondary transition-colors focus:outline-none">
+<span class="translate-x-6 inline-block h-4 w-4 transform rounded-full bg-white transition-transform"></span>
+</button>
+</td>
+<td class="px-6 py-4">
+<div class="flex flex-col items-center">
+<div class="flex items-center gap-1 text-secondary font-bold">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+<span>12</span>
+</div>
+<div class="w-16 h-1 bg-surface-container-high rounded-full mt-1 overflow-hidden">
+<div class="bg-secondary h-full" style="width: 40%"></div>
+</div>
+</div>
+</td>
+<td class="px-6 py-4 text-right font-headline font-bold text-primary">8,600</td>
+<td class="px-6 py-4 text-sm text-on-surface-variant">3 hours ago</td>
+<td class="px-6 py-4 text-right">
+<button class="p-2 opacity-0 group-hover:opacity-100 transition-opacity text-outline-variant hover:text-primary">
+<span class="material-symbols-outlined">more_vert</span>
+</button>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Pagination -->
+<div class="px-6 py-4 bg-surface-container-low flex items-center justify-between">
+<span class="font-label text-xs text-on-surface-variant uppercase tracking-wider">Showing 4 of 1,284 students</span>
+<div class="flex gap-1">
+<button class="p-2 rounded-lg bg-surface-container-lowest text-outline hover:text-primary scholar-shadow">
+<span class="material-symbols-outlined">chevron_left</span>
+</button>
+<button class="px-4 py-2 rounded-lg bg-primary text-on-primary font-bold text-sm scholar-shadow">1</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-bold text-sm scholar-shadow">2</button>
+<button class="px-4 py-2 rounded-lg bg-surface-container-lowest text-primary font-bold text-sm scholar-shadow">3</button>
+<button class="p-2 rounded-lg bg-surface-container-lowest text-outline hover:text-primary scholar-shadow">
+<span class="material-symbols-outlined">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Visible on Mobile) -->
+<nav class="fixed bottom-0 w-full z-50 rounded-t-[1.5rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-md scholar-shadow md:hidden">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-[#002c98] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">analytics</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-[#002c98] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">military_tech</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#002c98] dark:text-blue-300 bg-[#eef4ff] dark:bg-blue-900/30 rounded-xl px-3 py-1 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">admin_panel_settings</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider">Admin</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-[#002c98] active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">account_circle</span>
+<span class="font-['Inter'] text-[10px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

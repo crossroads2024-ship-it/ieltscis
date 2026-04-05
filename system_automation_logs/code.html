@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface": "#f8f9ff",
+                    "error": "#ba1a1a",
+                    "surface-tint": "#2f53ce",
+                    "surface-dim": "#d5dae5",
+                    "inverse-primary": "#b7c4ff",
+                    "surface-variant": "#dde3ee",
+                    "tertiary-container": "#005d22",
+                    "secondary": "#1b6d24",
+                    "on-secondary": "#ffffff",
+                    "tertiary": "#004317",
+                    "surface-container-highest": "#dde3ee",
+                    "outline-variant": "#c4c5d6",
+                    "on-tertiary-container": "#35de66",
+                    "on-primary-fixed": "#001453",
+                    "inverse-surface": "#2b3139",
+                    "tertiary-fixed": "#69ff87",
+                    "on-tertiary": "#ffffff",
+                    "on-tertiary-fixed": "#002108",
+                    "inverse-on-surface": "#ecf1fc",
+                    "surface-container-high": "#e3e8f4",
+                    "outline": "#747685",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-surface": "#161c24",
+                    "secondary-fixed-dim": "#88d982",
+                    "background": "#f8f9ff",
+                    "primary-fixed": "#dde1ff",
+                    "primary": "#002c98",
+                    "on-background": "#161c24",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error-container": "#93000a",
+                    "surface-container-low": "#eef4ff",
+                    "surface-bright": "#f8f9ff",
+                    "on-error": "#ffffff",
+                    "surface-container": "#e9eef9",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "on-secondary-fixed": "#002204",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "on-secondary-fixed-variant": "#005312",
+                    "error-container": "#ffdad6",
+                    "on-secondary-container": "#217128",
+                    "on-primary-fixed-variant": "#0438b6",
+                    "secondary-fixed": "#a3f69c",
+                    "secondary-container": "#a0f399",
+                    "on-primary-container": "#b2bfff",
+                    "primary-container": "#1a43bf",
+                    "on-surface-variant": "#444654",
+                    "on-primary": "#ffffff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .bg-scholar-gradient {
+            background: linear-gradient(135deg, #002c98 0%, #1a43bf 100%);
+        }
+        .scholar-shadow {
+            shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center">
+<img alt="Admin" class="w-full h-full object-cover" data-alt="professional headshot of a system administrator in a clean modern office setting with soft natural lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAFRN5l-TEPVPB-ny_EAKavD6p0EPDspZ6nwCBk_2f3WuJi0qRWDAP315fG2kuu5n_xKHqVPwdz8sYCM_j926XHLfM4pSL-gZ_eGrZkhFn7crsUc2Z8bZuFYnplyhChCHlhMr0ueSoAkdknZrkOoarmw40rmQ9csdNQRLOc4zw_7PS4x_iY5Aa3f1y6ELJMzFX0-tHfIEEGuywNjztHbNQ1XYnfhXjgtoptjm5lmLoCCqbQfKIBNEerckivSR-8XcYlQAVR7DDQnVE"/>
+</div>
+<h1 class="text-xl font-bold text-blue-900 tracking-tight font-headline">The Academic Architect</h1>
+</div>
+<button class="hover:bg-blue-50/50 transition-colors p-2 rounded-xl active:scale-95 duration-200">
+<span class="material-symbols-outlined text-blue-900">settings_suggest</span>
+</button>
+</header>
+<main class="pt-24 px-6 max-w-7xl mx-auto">
+<!-- Page Title & Overview -->
+<div class="mb-8">
+<h2 class="text-3xl font-extrabold font-headline text-on-surface mb-2">Automation &amp; System Status</h2>
+<p class="text-on-surface-variant font-body">Real-time infrastructure health and bot operations.</p>
+</div>
+<!-- Main Grid Layout -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+<!-- Colab / Vertex AI Status Panel -->
+<section class="lg:col-span-8 bg-surface-container-low rounded-[1.5rem] p-1 overflow-hidden">
+<div class="bg-secondary h-1 w-full mb-6"></div>
+<div class="px-6 pb-8">
+<div class="flex items-center justify-between mb-8">
+<div>
+<h3 class="font-headline font-bold text-lg">Compute Infrastructure</h3>
+<p class="text-label-md text-on-surface-variant font-label uppercase tracking-widest text-[10px]">Google Colab / Vertex AI</p>
+</div>
+<div class="flex items-center gap-2 bg-secondary-container px-4 py-1.5 rounded-full">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-on-secondary-container font-semibold text-xs uppercase tracking-wide">Systems Nominal</span>
+</div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+<!-- Script Cards -->
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<span class="material-symbols-outlined text-primary mb-3">upload_file</span>
+<h4 class="font-semibold text-sm mb-1">Lesson Uploader</h4>
+<p class="text-xs text-on-surface-variant mb-3">Last Sync: 4m ago</p>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[85%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<span class="material-symbols-outlined text-primary mb-3">notification_important</span>
+<h4 class="font-semibold text-sm mb-1">Reminder Bot</h4>
+<p class="text-xs text-on-surface-variant mb-3">Active Sessions: 1.2k</p>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[92%]"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-5 rounded-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<span class="material-symbols-outlined text-primary mb-3">celebration</span>
+<h4 class="font-semibold text-sm mb-1">Lottery Draw</h4>
+<p class="text-xs text-on-surface-variant mb-3">Status: Idle</p>
+<div class="w-full bg-surface-container h-1 rounded-full overflow-hidden">
+<div class="bg-outline-variant/30 h-full w-[10%]"></div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Supabase Storage Monitor -->
+<section class="lg:col-span-4 bg-surface-container-low rounded-[1.5rem] p-1 flex flex-col">
+<div class="bg-primary h-1 w-full mb-6"></div>
+<div class="px-6 pb-8 flex-1">
+<h3 class="font-headline font-bold text-lg mb-6">Supabase Storage</h3>
+<div class="space-y-6">
+<div>
+<div class="flex justify-between text-xs font-label font-bold uppercase mb-2">
+<span class="text-on-surface-variant">lessons_bucket</span>
+<span class="text-primary">4.2 GB / 10 GB</span>
+</div>
+<div class="h-8 bg-surface-container-lowest rounded-lg relative overflow-hidden">
+<div class="h-full bg-primary-container/20 w-[42%] flex items-center px-3">
+<div class="h-full w-full bg-primary absolute left-0 top-0 opacity-10"></div>
+<div class="h-1 w-full bg-primary rounded-full"></div>
+</div>
+</div>
+</div>
+<div>
+<div class="flex justify-between text-xs font-label font-bold uppercase mb-2">
+<span class="text-on-surface-variant">paid_lessons</span>
+<span class="text-secondary">1.8 GB / 5 GB</span>
+</div>
+<div class="h-8 bg-surface-container-lowest rounded-lg relative overflow-hidden">
+<div class="h-full bg-secondary-container/20 w-[36%] flex items-center px-3">
+<div class="h-full w-full bg-secondary absolute left-0 top-0 opacity-10"></div>
+<div class="h-1 w-full bg-secondary rounded-full"></div>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-outline-variant/10 text-center">
+<p class="text-xs text-on-surface-variant font-body">Total Objects Indexed</p>
+<p class="text-2xl font-headline font-extrabold text-primary">12,482</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Scheduled Jobs List -->
+<section class="lg:col-span-5 bg-surface-container-low rounded-[1.5rem] p-1">
+<div class="bg-tertiary-container h-1 w-full mb-6"></div>
+<div class="px-6 pb-8">
+<h3 class="font-headline font-bold text-lg mb-6">Scheduled Jobs</h3>
+<div class="space-y-3">
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex flex-col items-center justify-center font-label">
+<span class="text-[10px] font-bold text-on-surface-variant">OCT</span>
+<span class="text-lg font-bold text-primary leading-none">24</span>
+</div>
+<div class="flex-1">
+<h5 class="font-semibold text-sm">Monthly Lottery Draw</h5>
+<p class="text-xs text-on-surface-variant">Targeting 4,500 active participants</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">18:00</p>
+<span class="text-[9px] text-secondary font-bold uppercase">Pending</span>
+</div>
+</div>
+<div class="flex items-center gap-4 bg-surface-container-lowest p-4 rounded-xl">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex flex-col items-center justify-center font-label">
+<span class="text-[10px] font-bold text-on-surface-variant">DAILY</span>
+<span class="material-symbols-outlined text-primary text-xl">history</span>
+</div>
+<div class="flex-1">
+<h5 class="font-semibold text-sm">Daily Reminder Queue</h5>
+<p class="text-xs text-on-surface-variant">Batch size: 500 users/request</p>
+</div>
+<div class="text-right">
+<p class="text-xs font-bold text-on-surface">08:00</p>
+<span class="text-[9px] text-tertiary font-bold uppercase">Recurrence</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- System Logs Preview -->
+<section class="lg:col-span-7 bg-on-surface text-surface rounded-[1.5rem] p-6 shadow-xl relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-primary opacity-50"></div>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline font-bold text-lg flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">terminal</span>
+                        Live Batch Logs
+                    </h3>
+<div class="flex gap-1">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="w-2 h-2 rounded-full bg-secondary-container"></span>
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+</div>
+</div>
+<div class="font-mono text-[11px] leading-relaxed opacity-80 space-y-2 max-h-[200px] overflow-y-auto custom-scrollbar pr-2">
+<p><span class="text-secondary">[14:32:01]</span> <span class="text-primary-fixed-dim">INFO:</span> Initializing batch process #X499...</p>
+<p><span class="text-secondary">[14:32:04]</span> <span class="text-secondary-fixed-dim">SUCCESS:</span> Connected to Vertex AI endpoint 'marathon-model-v4'</p>
+<p><span class="text-secondary">[14:32:05]</span> <span class="text-primary-fixed-dim">INFO:</span> Pulling 42 new lesson drafts from lessons_bucket...</p>
+<p><span class="text-secondary">[14:32:08]</span> <span class="text-tertiary-fixed-dim">PROCESS:</span> Converting MD to Telegram formatted blocks [22/42]</p>
+<p><span class="text-secondary">[14:32:15]</span> <span class="text-tertiary-fixed-dim">PROCESS:</span> Generating audio previews for Listening modules...</p>
+<p><span class="text-secondary">[14:32:42]</span> <span class="text-secondary-fixed-dim">SUCCESS:</span> All assets mirrored to supabase/paid_lessons</p>
+<p><span class="text-secondary">[14:33:01]</span> <span class="text-primary-fixed-dim">INFO:</span> Awaiting next scheduled cron (08:00 UTC)...</p>
+<div class="animate-pulse flex gap-1">
+<span class="w-2 h-4 bg-primary opacity-50"></span>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white shadow-[0_-8px_24px_-4px_rgba(22,28,36,0.06)] rounded-t-3xl border-t-0">
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 px-6 hover:text-blue-700 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">group</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Students</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 px-6 hover:text-blue-700 transition-colors active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">history_edu</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Submissions</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-blue-50 text-blue-900 rounded-xl py-2 px-6 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined mb-1">precision_manufacturing</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider">Automation</span>
+</a>
+</nav>
+<style>
+        .custom-scrollbar::-webkit-scrollbar {
+            width: 4px;
+        }
+        .custom-scrollbar::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+        }
+        .custom-scrollbar::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 10px;
+        }
+    </style>
+</body></html>

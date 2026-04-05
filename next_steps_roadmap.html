@@ -1,0 +1,20 @@
+# IELTS Marathon Bot: Finalization Roadmap
+
+To ensure the system is production-ready and provides a premium experience for paid students, I recommend the following three phases:
+
+## Phase 1: The "Trust" Layer (Student Experience)
+*   **Receipt Upload Flow:** A dedicated screen where students upload their proof of payment. 
+*   **Pending State:** A "Verification in Progress" view that keeps the student engaged (perhaps with a sample lesson or FAQ) while the admin reviews the receipt.
+*   **Error Handling:** Clear messaging for failed payments or incorrect file uploads.
+
+## Phase 2: The "Persistence" Layer (Academic History)
+*   **Student Portfolio:** A centralized "Library" of the student's own work. Access to every previously graded essay and speaking recording.
+*   **Milestone Rewards:** Visual celebrations (badges/animations) when a student hits a 7-day streak or reaches a specific Band Score improvement.
+
+## Phase 3: The "Control" Layer (Admin Operations)
+*   **Content Uploader UI:** A simple interface to upload a PDF, MP3, and Homework JSON for a new lesson, which then automatically populates the Supabase storage and database.
+*   **User Management:** A way to search for specific students, manually adjust their points, or reset their streaks if needed.
+
+---
+**Current Status:** Core Logic & Visuals Complete.
+**Suggested Next Action:** Design the "Receipt Upload & Pending" flow.

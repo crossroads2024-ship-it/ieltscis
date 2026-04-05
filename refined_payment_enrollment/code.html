@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Payment Enrollment - The Academic Architect</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "on-surface-variant": "#444654",
+                        "on-primary-fixed": "#001453",
+                        "secondary-fixed": "#a3f69c",
+                        "on-secondary": "#ffffff",
+                        "on-primary-container": "#b2bfff",
+                        "primary": "#002c98",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "surface-dim": "#d5dae5",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-tertiary-fixed": "#002108",
+                        "surface-container-high": "#e3e8f4",
+                        "inverse-primary": "#b7c4ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "inverse-surface": "#2b3139",
+                        "error": "#ba1a1a",
+                        "on-secondary-container": "#217128",
+                        "surface-container-highest": "#dde3ee",
+                        "outline-variant": "#c4c5d6",
+                        "on-surface": "#161c24",
+                        "on-background": "#161c24",
+                        "secondary": "#1b6d24",
+                        "surface-bright": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "on-secondary-fixed-variant": "#005312",
+                        "inverse-on-surface": "#ecf1fc",
+                        "tertiary-container": "#005d22",
+                        "surface-tint": "#2f53ce",
+                        "on-error-container": "#93000a",
+                        "outline": "#747685",
+                        "surface-container": "#e9eef9",
+                        "on-tertiary": "#ffffff",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "secondary-container": "#a0f399",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary-container": "#35de66",
+                        "on-secondary-fixed": "#002204",
+                        "tertiary": "#004317",
+                        "primary-container": "#1a43bf",
+                        "on-primary": "#ffffff",
+                        "background": "#f8f9ff",
+                        "on-error": "#ffffff",
+                        "tertiary-fixed": "#69ff87",
+                        "surface-container-low": "#eef4ff",
+                        "surface-variant": "#dde3ee"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9ff;
+            color: #161c24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+</head>
+<body class="bg-surface min-h-screen flex flex-col">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-50 bg-[#f8f9ff] dark:bg-slate-950 flex items-center justify-between px-6 py-4 w-full no-border tonal-shift bg-[#eef4ff] dark:bg-slate-900">
+<div class="flex items-center gap-4">
+<button class="material-symbols-outlined text-[#002c98] dark:text-blue-400 p-2 hover:bg-slate-200/50 dark:hover:bg-slate-800/50 transition-colors rounded-full Active: scale-95 duration-150">arrow_back</button>
+<h1 class="font-['Manrope'] font-bold text-lg text-[#002c98] dark:text-blue-400">The Academic Architect</h1>
+</div>
+<div class="hidden md:flex items-center gap-8">
+<span class="font-['Inter'] font-medium text-[12px] uppercase tracking-wider text-slate-500 dark:text-slate-400 cursor-pointer hover:text-[#002c98] transition-colors">Library</span>
+<span class="font-['Inter'] font-medium text-[12px] uppercase tracking-wider text-slate-500 dark:text-slate-400 cursor-pointer hover:text-[#002c98] transition-colors">Practice</span>
+<span class="font-['Inter'] font-medium text-[12px] uppercase tracking-wider text-slate-500 dark:text-slate-400 cursor-pointer hover:text-[#002c98] transition-colors">Progress</span>
+<span class="font-['Inter'] font-medium text-[12px] uppercase tracking-wider text-slate-500 dark:text-slate-400 cursor-pointer hover:text-[#002c98] transition-colors">Profile</span>
+</div>
+</header>
+<main class="flex-grow max-w-4xl mx-auto w-full px-6 py-8 pb-32">
+<!-- Page Header -->
+<div class="mb-10 text-center md:text-left">
+<h2 class="font-headline font-extrabold text-3xl md:text-4xl text-primary mb-2">Secure Enrollment</h2>
+<p class="font-body text-on-surface-variant max-w-md">Complete your enrollment in the IELTS Marathon. Your secure path to academic excellence starts here.</p>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+<!-- Left Column: Enrollment Summary -->
+<div class="lg:col-span-5 space-y-6">
+<div class="bg-gradient-to-br from-white to-surface-container-low dark:from-slate-900 dark:to-slate-950 rounded-3xl p-8 scholar-shadow relative overflow-hidden border border-primary/5">
+<!-- Progress Pulse Indicator -->
+<div class="absolute top-0 left-0 w-full h-1.5 bg-secondary-container/30">
+<div class="h-full bg-secondary w-3/4 shadow-[0_0_8px_rgba(27,109,36,0.4)]"></div>
+</div>
+<div class="flex items-center gap-2 mb-6">
+<span class="material-symbols-outlined text-primary text-xl">verified</span>
+<h3 class="font-headline font-bold text-xl text-primary">Enrollment Summary</h3>
+</div>
+<div class="space-y-6">
+<div>
+<p class="font-headline font-bold text-lg text-on-surface">IELTS Marathon - Full Access</p>
+<p class="font-label text-sm text-on-surface-variant mt-1">Unlimited scholarly resources &amp; mock exams</p>
+</div>
+<div class="pt-6 border-t border-outline-variant/30 flex justify-between items-end">
+<div class="space-y-1">
+<span class="block font-label text-[10px] uppercase tracking-widest text-on-surface-variant">One-time investment</span>
+<span class="font-headline font-extrabold text-4xl text-primary">$99.00</span>
+</div>
+<span class="font-headline font-bold text-sm text-on-surface-variant mb-1">USD</span>
+</div>
+</div>
+<div class="mt-8 p-5 bg-primary/[0.03] border border-primary/5 rounded-2xl flex gap-4 items-start">
+<span class="material-symbols-outlined text-primary mt-0.5">lock</span>
+<p class="font-label text-xs text-on-surface-variant leading-relaxed">Your transaction is protected by bank-grade encryption. We prioritize your data privacy and security throughout your academic journey.</p>
+</div>
+</div>
+<div class="hidden lg:block relative group">
+<img alt="Scholarly background" class="rounded-3xl object-cover w-full opacity-80" data-alt="minimalist editorial illustration of a structured architectural blueprint on deep blue background soft lighting professional academic aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBOUdlGugahisDRbxXCa0NsP-awFYrA8wVXkDeVO-Rxj893j9I3xjJI6m2aik8cxJOs9j_uuC6wYg3vu-CXZNpCM5v0Rci-CzD2ZERoE8gF8YF8Fc8D7ESTiPPyKjxIKzbxW3iwjKqp0_ZrurOpMUtvb6oekJi0YPXNc5kWzMKkYzZdjZxNK0yItGfKV9rAQh9dwOxAP7Efn1ac9jWSyDdXRFND2KcHGtbjUOGxNsPhRzt88YkfE_ysLVib04doG34_1kZdYYa0Y54"/>
+<div class="absolute inset-0 bg-primary/10 group-hover:bg-transparent transition-colors rounded-3xl"></div></div>
+</div>
+<!-- Right Column: Payment Methods -->
+<div class="lg:col-span-7 space-y-6">
+<!-- 1. Credit/Debit Card -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 scholar-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-xl">credit_card</span>
+<h4 class="font-headline font-bold text-on-surface">Credit/Debit Card</h4>
+</div>
+<div class="space-y-4">
+<div class="space-y-1">
+<label class="font-label text-xs font-semibold text-on-surface-variant px-1">Card Number</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl p-4 font-label focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" placeholder="0000 0000 0000 0000" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-1">
+<label class="font-label text-xs font-semibold text-on-surface-variant px-1">Expiry Date</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl p-4 font-label focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" placeholder="MM/YY" type="text"/>
+</div>
+<div class="space-y-1">
+<label class="font-label text-xs font-semibold text-on-surface-variant px-1">CVV</label>
+<input class="w-full bg-surface-container-low border-none rounded-2xl p-4 font-label focus:ring-2 focus:ring-primary/20 transition-all placeholder:text-outline" placeholder="***" type="password"/>
+</div>
+</div>
+</div>
+</section>
+<!-- 2. Mobile Payment Apps -->
+<section class="bg-surface-container-lowest rounded-3xl p-6 scholar-shadow">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-xl">account_balance_wallet</span>
+<h4 class="font-headline font-bold text-on-surface">Mobile Payment Apps</h4>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<button class="flex items-center justify-center gap-2 p-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-2xl font-headline font-bold text-on-surface">
+<img alt="GPay" class="h-5" data-alt="Google Pay logo on white background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEFdI0_PbZ1y_QzS-oGwXxowuQ-_Z_8Pwyaalft51LdWd8jfnoZAhfA47Vtv6KP0BKiG8uw8AiDaoBtsvGExuYfHcF8wWHjhKSGVQblm6JfzCzUAVXxKv6s6li8uMpR-VDX4noFvINPXSOmQqe9DvKX9j-Hie8QsPa5ogkF24vRpCMfzIDxKq6r_eBRZzOyA-YTbTZXcskN46oKUDdA2ql0gjCrQm-RypnSSwzEFs0mGtDzCFQFCddT8ivaNsGE8kIsFRqI3_T1M0"/>
+<span>GPay</span>
+</button>
+<button class="flex items-center justify-center gap-2 p-4 bg-surface-container-low hover:bg-surface-container-high transition-colors rounded-2xl font-headline font-bold text-on-surface">
+<span class="material-symbols-outlined text-xl">ios</span>
+<span>Apple Pay</span>
+</button>
+</div>
+</section>
+<!-- 3. Bank Transfer -->
+<section class="bg-surface-container-low rounded-3xl p-6 border border-primary/5">
+<div class="flex items-center gap-3 mb-6">
+<span class="material-symbols-outlined text-primary p-2 bg-primary/10 rounded-xl">account_balance</span>
+<h4 class="font-headline font-bold text-on-surface">Bank Transfer</h4>
+</div>
+<div class="bg-surface-container-lowest rounded-2xl p-5 space-y-4 mb-6">
+<div class="flex justify-between items-center text-sm">
+<span class="font-label text-on-surface-variant">Account Name</span>
+<span class="font-body font-semibold text-on-surface">The Academic Architect LLC</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-label text-on-surface-variant">Bank Name</span>
+<span class="font-body font-semibold text-on-surface">Scholars Trust Bank</span>
+</div>
+<div class="flex justify-between items-center text-sm">
+<span class="font-label text-on-surface-variant">Account Number</span>
+<span class="font-body font-semibold text-on-surface">8820 4491 0052</span>
+</div>
+</div>
+<button class="w-full flex items-center justify-center gap-2 p-3 bg-primary/5 hover:bg-primary/10 text-primary font-headline font-bold text-sm rounded-full transition-all"><span class="material-symbols-outlined text-lg">history_edu</span>
+                        Generate Reference &amp; Upload Receipt</button>
+</section>
+</div>
+</div>
+</main>
+<!-- Bottom Footer / CTA -->
+<div class="fixed bottom-0 left-0 w-full z-50 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl px-6 pb-8 pt-4 scholar-shadow">
+<div class="max-w-4xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+<div class="hidden md:block">
+<p class="font-label text-xs text-on-surface-variant">Total to pay</p>
+<p class="font-headline font-bold text-xl text-primary">USD $99.00</p>
+</div>
+<button class="w-full md:w-auto px-12 py-5 bg-gradient-to-br from-primary to-primary-container text-white font-headline font-bold text-lg rounded-full shadow-lg hover:shadow-primary/20 active:scale-[0.98] transition-all flex items-center justify-center gap-3">
+                Complete Enrollment
+                <span class="material-symbols-outlined">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Mobile Navigation Shell (BottomNavBar) -->
+<nav class="md:hidden bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-3 bg-white/80 dark:bg-slate-900/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-xl hidden">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-wide uppercase mt-1">Library</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">edit_note</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-wide uppercase mt-1">Practice</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">insights</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-wide uppercase mt-1">Progress</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-5 py-2">
+<span class="material-symbols-outlined">person</span>
+<span class="font-['Inter'] font-medium text-[10px] tracking-wide uppercase mt-1">Profile</span>
+</div>
+</nav>
+</body></html>

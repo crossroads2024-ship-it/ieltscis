@@ -1,0 +1,31 @@
+# IELTS Marathon Design Audit & Gap Analysis
+
+## 1. Technical Stack Alignment
+- **Backend (Python/FastAPI/PostgreSQL):** Current designs reflect an automated, data-driven system.
+- **Telegram Bot (aiogram):** Mobile screens (SCREEN_30, SCREEN_26, etc.) accurately represent bot interactions.
+- **Admin Panel (React/FastAPI Admin):** Existing admin screens (SCREEN_14, SCREEN_22, SCREEN_5) align with management needs.
+
+## 2. Feature Cross-Check (The "Gaps")
+
+### Phase 31: Community & Sharing
+- **MISSING:** Community Feed Screen (where students see shared essays/clips).
+- **MISSING:** Post Creation/Upload Flow (Open side sharing).
+- **MISSING:** Admin Moderation Dashboard (approving/rejecting public posts).
+
+### Phase 32: Reputation & Mentorship
+- **MISSING:** Reputation/Leveling Progress View (Titles like Learner, Performer, Mentor).
+- **MISSING:** Mentor Matchmaking/Chat Interface (Student side).
+- **MISSING:** Mentor Dashboard (Mentor side for volunteering).
+
+### Phase 26 & 29: Advanced Speech Analytics
+- **MISSING:** Visual Phonetics Dashboard (Pitch, Energy, Pause Ratio charts).
+- **MISSING:** Comparative Analytics (Student progress over time in speech metrics).
+
+### Phase 27: Offline & Sync
+- **MISSING:** Offline State/Sync Pending indicators on mobile.
+
+## 3. Implementation Plan
+1. **Design Community Feed:** Social hub for students.
+2. **Design Mentor Interaction:** Matchmaking and reputation views.
+3. **Design Phonetics Dashboard:** Quantitative speech metrics.
+4. **Final Refinement:** Ensure all cross-platform links (Bot <-> Web) are clear.

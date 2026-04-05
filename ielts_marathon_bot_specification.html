@@ -1,0 +1,232 @@
+# **IELTS MARATHON BOT — FULL SYSTEM SPECIFICATION (FINAL)**
+## **1. Overview**
+The IELTS Marathon Bot is a **fully paid, gated Telegram-based IELTS preparation system** that delivers structured lessons, evaluates writing and speaking using AI, and tracks user progress.
+The system is built on:
+* **Telegram Bot API** (frontend interaction)
+* **Supabase** (database + storage)
+* **OpenAI (GPT-4o-mini)** (writing evaluation)
+* **Optional Google TTS / Voice Cloning** (speaking system)
+* **Colab / Vertex AI** (content automation & maintenance)
+---
+# **2. ACCESS MODEL (CRITICAL: OPEN vs CLOSED SYSTEM)**
+### **Closed System (Core Model)**
+* ALL lessons are **paid-only**
+* Users **cannot access any lesson by default**
+* Access is controlled via:
+  * `user_progress.unlocked_lessons`
+  * OR global unlock flag (full access)
+### **Open Layer (User Interaction Layer)**
+Even though content is closed, users can still:
+* Start bot (`/start`)
+* View menu
+* Submit writing tasks
+* Submit speaking recordings
+* Upload payment receipts
+👉 This is your **“open side”** — interaction without content access.
+---
+## **Access Logic**
+```text
+IF user is NOT unlocked:
+    Show locked message + payment instructions
+IF user IS unlocked:
+    Allow access to:
+        - Lessons
+        - Homework
+        - Speaking tasks
+```
+---
+# **3. USER FLOW (END-TO-END)**
+### **Step 1: Entry**
+* User sends `/start`
+* Bot:
+  * Registers user in Supabase
+  * Sends welcome message
+  * Shows locked system message
+---
+### **Step 2: Payment**
+* User:
+  * Generates reference
+  * Uploads receipt
+* Admin:
+  * Receives notification
+  * Clicks `/unlock_[userID]`
+---
+### **Step 3: Unlock**
+* System updates:
+```json
+{
+  "unlocked": true
+}
+```
+---
+### **Step 4: Full Access**
+User can now:
+* Access lessons
+* Do homework
+* Submit writing
+* Submit speaking
+* Track progress
+---
+# **4. LESSON DISTRIBUTION SYSTEM (VERY IMPORTANT)**
+## **Lesson Storage Structure**
+### **Supabase Storage (Bucket: lessons_bucket)**
+```text
+paid_lessons/
+ ├── lesson1/
+ │   ├── lesson.pdf
+ │   ├── slides.pptx
+ │   └── audio.mp3
+ ├── lesson2/
+```
+---
+## **Lessons Table Structure**
+```json
+{
+  "id": "uuid",
+  "title": "Lesson 1: Reading Strategies",
+  "type": "paid",
+  "level": "Intermediate",
+  "content": {
+    "document": "paid_lessons/lesson1/lesson.pdf",
+    "audio": ["paid_lessons/lesson1/audio.mp3"]
+  },
+  "homework": {...},
+  "is_active": true
+}
+```
+---
+## **Lesson Delivery Logic**
+```text
+User sends: /lesson_1
+→ Bot fetches lesson from Supabase
+IF user unlocked:
+    Send:
+        - PDF
+        - PPT (optional)
+        - Audio
+        - Homework prompt
+ELSE:
+    Send:
+        "This lesson is locked. Please complete payment."
+```
+---
+# **5. HOMEWORK SYSTEM (OPEN INTERACTION LAYER)**
+## **Homework Types**
+* Multiple choice
+* Short answers
+* Writing tasks
+* Speaking tasks
+---
+## **Homework Flow**
+```text
+User: /homework_1
+→ Bot sends questions
+User submits answers
+→ Stored in:
+student_submissions table
+```
+---
+## **student_submissions Table**
+```json
+{
+  "user_id": "telegram_id",
+  "lesson_id": "lesson_id",
+  "answers": {...},
+  "type": "writing/speaking/test",
+  "status": "pending/graded",
+  "score": null,
+  "submitted_at": timestamp
+}
+```
+---
+# **6. AI WRITING EVALUATION**
+* User submits essay
+* GPT evaluates:
+  * Band score
+  * Task response
+  * Coherence & cohesion
+  * Grammar
+  * Vocabulary
+* Returns:
+  * Score
+  * Corrections
+  * Suggestions
+---
+# **7. SPEAKING SYSTEM**
+## **Input**
+* Bot sends:
+  * Prompt
+  * Audio (British accent or cloned voice)
+## **Output**
+* User records voice
+* Audio stored in Supabase
+## **Optional AI Evaluation**
+* Fluency
+* Pronunciation
+* Coherence
+---
+# **8. PROGRESS TRACKING**
+## **user_progress Table**
+```json
+{
+  "user_id": "...",
+  "unlocked_lessons": [...],
+  "completed_homework": {...},
+  "daily_streak": 5,
+  "last_active": timestamp
+}
+```
+---
+# **9. DAILY ENGAGEMENT SYSTEM**
+* Daily reminders:
+  * “Complete your lesson”
+  * “You have pending homework”
+* Streak system:
+  * Encourages consistency
+---
+# **10. LOTTERY / GAMIFICATION SYSTEM**
+## **Logic**
+* Users earn points for:
+  * Homework completion
+  * Daily activity
+## **Table: lottery_entries**
+```json
+{
+  "user_id": "...",
+  "points": 10,
+  "entry_type": "daily",
+  "won": false
+}
+```
+## **Draw**
+* Weekly selection via script
+* Bot announces winners
+---
+# **11. ADMIN SYSTEM**
+Admin can:
+* Unlock users (`/unlock_ID`)
+* View submissions
+* Monitor progress
+* Manage lessons via Supabase or scripts
+---
+# **12. AUTOMATION SYSTEM (CRITICAL)**
+## **Google Colab / Vertex AI**
+Used for:
+* Uploading lessons (PDF, PPT, audio)
+* Uploading homework JSON
+* Batch processing
+* Migration
+* Scheduled jobs (lottery, reminders)
+---
+# **13. WHAT MAKES THIS SYSTEM COMPLETE**
+This bot includes:
+✅ Closed paid content system
+✅ Open interaction layer (submissions, engagement)
+✅ Structured lesson delivery (files + metadata)
+✅ AI writing evaluation
+✅ Speaking practice system
+✅ Progress tracking
+✅ Manual payment unlock system
+✅ Automation via Colab
+✅ Scalable Supabase backend
+✅ Optional gamification (lottery)

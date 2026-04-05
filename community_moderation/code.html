@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#88d982",
+                        "secondary-container": "#a0f399",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde3ee",
+                        "on-primary-container": "#b2bfff",
+                        "surface-container-high": "#e3e8f4",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#2f53ce",
+                        "primary-container": "#1a43bf",
+                        "inverse-primary": "#b7c4ff",
+                        "inverse-on-surface": "#ecf1fc",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001453",
+                        "on-background": "#161c24",
+                        "tertiary": "#004317",
+                        "on-surface": "#161c24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eef4ff",
+                        "on-secondary-fixed": "#002204",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-bright": "#f8f9ff",
+                        "outline": "#747685",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#e9eef9",
+                        "primary": "#002c98",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-tertiary-container": "#35de66",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "secondary": "#1b6d24",
+                        "outline-variant": "#c4c5d6",
+                        "on-secondary-container": "#217128",
+                        "on-surface-variant": "#444654",
+                        "surface-variant": "#dde3ee",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "surface-dim": "#d5dae5",
+                        "on-tertiary-fixed": "#002108",
+                        "tertiary-container": "#005d22",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "inverse-surface": "#2b3139"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        body { font-family: 'Public Sans', sans-serif; }
+        .headline { font-family: 'Manrope', sans-serif; }
+        .label { font-family: 'Inter', sans-serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+    </style>
+</head>
+<body class="bg-surface text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/80 backdrop-blur-xl scholar-shadow flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-4">
+<span class="text-xl font-extrabold text-primary uppercase tracking-widest headline">Academic Architect</span>
+<div class="h-6 w-[1px] bg-outline-variant/30 ml-2"></div>
+<span class="label text-[10px] font-bold uppercase tracking-widest text-primary/60 px-3 py-1 bg-primary-fixed rounded-full">Admin Panel</span>
+</div>
+<div class="flex items-center gap-6">
+<div class="flex items-center gap-2 group cursor-pointer">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden border-2 border-primary-container/20">
+<img alt="Student Profile" data-alt="professional portrait of a university administrator in a clean modern office setting soft lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDzZnAxjwUKJ6zC_wE4dJAd2ASMUfIpLfJd8kuR-RcvrjyV53dcvESbFe2VLOQt22P56-XfbXEBbtG6eIBx-ZM_wnPip2MOwR2lPh4-dWGTpoo1r6Qw5GezjBjv4bk2-r-JyWVDqJGFNBwVEgxqbpId5faXYb-VHLqiR7UXQgUa4kidpcuIooHKACd0ODpmN0OJ0BVE4SbB20TbJU481KrxgjaU9Oz7WUpNYrVzzZc8ZYyH3B77KxIOccTcWFe0iBFujEEw9hpwnIE"/>
+</div>
+<span class="font-bold text-primary group-hover:opacity-80 transition-opacity headline text-sm">Scholar Jenkins</span>
+</div>
+<button class="material-symbols-outlined text-primary hover:opacity-80 transition-opacity">settings</button>
+</div>
+</header>
+<div class="flex pt-20 h-screen">
+<!-- NavigationDrawer (Sidebar) -->
+<aside class="hidden md:flex flex-col p-8 gap-6 h-full w-80 bg-surface-bright scholar-shadow z-40">
+<div class="space-y-4">
+<nav class="flex flex-col gap-2">
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out font-medium" href="#">
+<span class="material-symbols-outlined">menu_book</span>
+<span>Curriculum</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out font-medium" href="#">
+<span class="material-symbols-outlined">translate</span>
+<span>Vocabulary</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out font-medium" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span>Mock Exams</span>
+</a>
+<div class="h-px bg-outline-variant/20 my-4"></div>
+<a class="flex items-center gap-4 p-4 bg-primary-container/10 text-primary rounded-xl transition-all duration-300 ease-in-out font-semibold" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">admin_panel_settings</span>
+<span>Moderation</span>
+</a>
+<a class="flex items-center gap-4 p-4 text-on-surface-variant hover:bg-surface-container-high rounded-xl transition-all duration-300 ease-in-out font-medium" href="#">
+<span class="material-symbols-outlined">support_agent</span>
+<span>Help Desk</span>
+</a>
+</nav>
+</div>
+<div class="mt-auto p-6 bg-surface-container-low rounded-3xl space-y-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">verified</span>
+<span class="label text-[10px] font-bold text-secondary uppercase">System Health</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1 rounded-full overflow-hidden">
+<div class="bg-secondary h-full w-[94%]"></div>
+</div>
+<p class="text-[11px] text-on-surface-variant">All services operating normally. 24 active moderators online.</p>
+</div>
+</aside>
+<!-- Main Content Area -->
+<main class="flex-1 overflow-y-auto bg-surface p-8">
+<header class="mb-10">
+<h1 class="headline text-3xl font-extrabold text-primary tracking-tight mb-2">Content Moderation Queue</h1>
+<p class="text-on-surface-variant max-w-2xl">Review and validate user-generated IELTS materials. Maintain the scholarly integrity of the Sanctuary ecosystem through meticulous oversight.</p>
+</header>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-4 gap-6 mb-10">
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] scholar-shadow flex flex-col gap-1 border-t-4 border-primary">
+<span class="label text-[10px] font-bold uppercase text-outline tracking-wider">Pending Tasks</span>
+<span class="headline text-4xl font-bold text-on-surface">142</span>
+<span class="label text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_down</span> 12% from yesterday
+                    </span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] scholar-shadow flex flex-col gap-1 border-t-4 border-secondary">
+<span class="label text-[10px] font-bold uppercase text-outline tracking-wider">Avg. Response Time</span>
+<span class="headline text-4xl font-bold text-on-surface">4.2m</span>
+<span class="label text-xs text-secondary font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">bolt</span> Optimal speed
+                    </span>
+</div>
+<div class="bg-surface-container-lowest p-6 rounded-[1.5rem] scholar-shadow flex flex-col gap-1 border-t-4 border-primary-container">
+<span class="label text-[10px] font-bold uppercase text-outline tracking-wider">AI Flags Today</span>
+<span class="headline text-4xl font-bold text-on-surface">18</span>
+<span class="label text-xs text-error font-medium flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">warning</span> Action required
+                    </span>
+</div>
+<div class="bg-primary-container text-white p-6 rounded-[1.5rem] scholar-shadow flex flex-col justify-between overflow-hidden relative">
+<div class="z-10">
+<span class="label text-[10px] font-bold uppercase text-primary-fixed tracking-wider">Moderator Rank</span>
+<span class="headline text-xl font-bold block mt-1">Senior Architect</span>
+</div>
+<span class="material-symbols-outlined absolute -right-4 -bottom-4 text-8xl opacity-10 rotate-12">auto_awesome</span>
+<button class="z-10 label text-[10px] font-bold bg-white/20 backdrop-blur-md rounded-full px-4 py-2 w-fit mt-4 hover:bg-white/30 transition-all">View Leaderboard</button>
+</div>
+</div>
+<!-- Moderation Table Container -->
+<div class="bg-surface-container-lowest rounded-[2rem] overflow-hidden scholar-shadow">
+<div class="px-8 py-6 flex justify-between items-center border-b border-surface-container-high">
+<div class="flex gap-4">
+<button class="bg-primary-container text-white px-6 py-2 rounded-full font-bold text-sm headline shadow-lg">All Posts</button>
+<button class="bg-surface-container-low text-primary px-6 py-2 rounded-full font-bold text-sm headline hover:bg-surface-container-high transition-all">Essays</button>
+<button class="bg-surface-container-low text-primary px-6 py-2 rounded-full font-bold text-sm headline hover:bg-surface-container-high transition-all">Audio Tasks</button>
+</div>
+<div class="flex gap-3">
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg">search</span>
+<input class="pl-10 pr-4 py-2 bg-surface-container-low border-none rounded-full text-sm focus:ring-2 focus:ring-primary/20 w-64 placeholder:text-outline-variant font-medium" placeholder="Search Post ID or User..." type="text"/>
+</div>
+<button class="material-symbols-outlined p-2 text-on-surface-variant hover:bg-surface-container-low rounded-full transition-all">filter_list</button>
+</div>
+</div>
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/50">
+<th class="px-8 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest">Post ID</th>
+<th class="px-6 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest">User / Candidate</th>
+<th class="px-6 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest">Content Type</th>
+<th class="px-6 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest">AI Safety Status</th>
+<th class="px-6 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest">Submitted</th>
+<th class="px-8 py-4 label text-[11px] font-bold uppercase text-outline tracking-widest text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container-low">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6 font-bold text-primary headline text-sm">#IELTS-8821</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed flex items-center justify-center text-primary font-bold text-xs headline">AM</div>
+<div>
+<div class="font-semibold text-on-surface text-sm">Amara Miller</div>
+<div class="label text-[10px] text-outline">Band 7.5 Aspirant</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">description</span>
+<span class="text-sm font-medium">Task 2 Essay</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Safe
+                                    </span>
+</td>
+<td class="px-6 py-6 label text-xs text-on-surface-variant font-medium">2m ago</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-secondary text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">check</span></button>
+<button class="bg-error text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">close</span></button>
+<button class="bg-surface-container-highest text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-lg">visibility</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6 font-bold text-primary headline text-sm">#IELTS-8794</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-surface-container-high flex items-center justify-center text-primary-container font-bold text-xs headline">RK</div>
+<div>
+<div class="font-semibold text-on-surface text-sm">Rajesh Kumar</div>
+<div class="label text-[10px] text-outline">Band 6.0 Aspirant</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">mic</span>
+<span class="text-sm font-medium">Speaking Part 1</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-error-container text-on-error-container text-[11px] font-bold uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-pulse"></span> Flagged
+                                    </span>
+</td>
+<td class="px-6 py-6 label text-xs text-on-surface-variant font-medium">14m ago</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-secondary text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">check</span></button>
+<button class="bg-error text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">close</span></button>
+<button class="bg-surface-container-highest text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-lg">visibility</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6 font-bold text-primary headline text-sm">#IELTS-8790</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-tertiary-fixed flex items-center justify-center text-on-tertiary-fixed font-bold text-xs headline">LS</div>
+<div>
+<div class="font-semibold text-on-surface text-sm">Lena Schmidt</div>
+<div class="label text-[10px] text-outline">Premium Scholar</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">description</span>
+<span class="text-sm font-medium">Task 1 Report</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-surface-container-high text-on-surface-variant text-[11px] font-bold uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-outline"></span> Pending AI
+                                    </span>
+</td>
+<td class="px-6 py-6 label text-xs text-on-surface-variant font-medium">22m ago</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-secondary text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">check</span></button>
+<button class="bg-error text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">close</span></button>
+<button class="bg-surface-container-highest text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-lg">visibility</span></button>
+</div>
+</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface-container-low/30 transition-colors group">
+<td class="px-8 py-6 font-bold text-primary headline text-sm">#IELTS-8782</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center text-primary font-bold text-xs headline">ZH</div>
+<div>
+<div class="font-semibold text-on-surface text-sm">Zhang Hao</div>
+<div class="label text-[10px] text-outline">Target Band 8.5</div>
+</div>
+</div>
+</td>
+<td class="px-6 py-6">
+<div class="flex items-center gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined text-lg">mic</span>
+<span class="text-sm font-medium">Speaking Part 2</span>
+</div>
+</td>
+<td class="px-6 py-6">
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-secondary-container text-on-secondary-container text-[11px] font-bold uppercase tracking-tighter">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Safe
+                                    </span>
+</td>
+<td class="px-6 py-6 label text-xs text-on-surface-variant font-medium">1h ago</td>
+<td class="px-8 py-6 text-right">
+<div class="flex justify-end gap-2 opacity-0 group-hover:opacity-100 transition-opacity">
+<button class="bg-secondary text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">check</span></button>
+<button class="bg-error text-white p-2 rounded-full hover:shadow-lg active:scale-90 transition-all"><span class="material-symbols-outlined text-lg">close</span></button>
+<button class="bg-surface-container-highest text-primary p-2 rounded-full hover:bg-primary hover:text-white transition-all"><span class="material-symbols-outlined text-lg">visibility</span></button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="px-8 py-4 bg-surface-container-low/30 flex justify-between items-center">
+<span class="label text-[10px] font-bold text-outline uppercase">Showing 4 of 142 Pending Items</span>
+<div class="flex items-center gap-2">
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-lg">chevron_left</span></button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg bg-primary text-white font-bold text-xs headline">1</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-bold text-xs headline">2</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-bold text-xs headline">3</button>
+<span class="mx-1 text-outline">...</span>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high font-bold text-xs headline">36</button>
+<button class="w-8 h-8 flex items-center justify-center rounded-lg hover:bg-surface-container-high transition-all"><span class="material-symbols-outlined text-lg">chevron_right</span></button>
+</div>
+</div>
+</div>
+</main>
+</div>
+<!-- Floating Action Button (Admin Actions) -->
+<button class="fixed right-10 bottom-10 bg-gradient-to-tr from-primary to-primary-container text-white w-16 h-16 rounded-full scholar-shadow flex items-center justify-center hover:scale-105 active:scale-95 transition-all z-50">
+<span class="material-symbols-outlined text-3xl">add_moderator</span>
+</button>
+</body></html>

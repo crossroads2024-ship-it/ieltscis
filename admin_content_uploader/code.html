@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lesson Architect | IELTS Marathon Admin</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#35de66",
+                        "tertiary-fixed": "#69ff87",
+                        "surface-variant": "#dde3ee",
+                        "surface-container-highest": "#dde3ee",
+                        "on-secondary-container": "#217128",
+                        "surface-container-high": "#e3e8f4",
+                        "on-primary": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "inverse-on-surface": "#ecf1fc",
+                        "surface-bright": "#f8f9ff",
+                        "secondary-container": "#a0f399",
+                        "secondary-fixed": "#a3f69c",
+                        "outline": "#747685",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "primary-fixed": "#dde1ff",
+                        "secondary": "#1b6d24",
+                        "inverse-primary": "#b7c4ff",
+                        "on-surface-variant": "#444654",
+                        "on-secondary-fixed-variant": "#005312",
+                        "surface": "#f8f9ff",
+                        "on-primary-fixed": "#001453",
+                        "secondary-fixed-dim": "#88d982",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-tertiary-fixed": "#002108",
+                        "tertiary-container": "#005d22",
+                        "surface-container-low": "#eef4ff",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#161c24",
+                        "on-surface": "#161c24",
+                        "on-secondary-fixed": "#002204",
+                        "inverse-surface": "#2b3139",
+                        "on-tertiary": "#ffffff",
+                        "error": "#ba1a1a",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "error-container": "#ffdad6",
+                        "on-primary-container": "#b2bfff",
+                        "surface-container-lowest": "#ffffff",
+                        "background": "#f8f9ff",
+                        "outline-variant": "#c4c5d6",
+                        "primary": "#002c98",
+                        "surface-container": "#e9eef9",
+                        "primary-container": "#1a43bf",
+                        "surface-dim": "#d5dae5",
+                        "tertiary": "#004317",
+                        "surface-tint": "#2f53ce"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "2xl": "1rem",
+                        "3xl": "1.5rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface min-h-screen">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-[#f8f9ff] shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<div class="flex items-center justify-between px-6 py-4 w-full max-w-7xl mx-auto">
+<div class="flex items-center gap-4">
+<div class="h-10 w-10 rounded-full bg-primary-fixed flex items-center justify-center overflow-hidden">
+<img alt="Admin Profile" class="h-full w-full object-cover" data-alt="professional headshot of a senior academic administrator with a warm and authoritative expression against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD-I06bsaGQHtXexA6LFT8WbNq7vvhoa-HZVCrSc8Ss6pVTJFJjsjx7GjGvFmaQ3rXzTK5jiCLFxNfjm15l88mAsJVoO0CLtVLVFTI0lkNAQFi37T34Pejf7ZzH3Ut91e9hBbM97siZbykTITT6dw4PxTMG8d_VGUNITtgmpIzoQRGLriSc6BJvk2H7ahTmIZHcS8s01Q1SneFv4M-RMG6G7kA8LSmGGWnKaPk74ESTZk5K-dWsXS1ZPtRbuHZ5eSqU6RHWLniOfAg"/>
+</div>
+<h1 class="font-headline font-extrabold text-primary tracking-tight text-xl">IELTS Marathon</h1>
+</div>
+<nav class="hidden md:flex items-center gap-8">
+<a class="text-slate-500 hover:text-primary transition-colors font-label text-sm uppercase tracking-wider font-medium" href="#">Portfolio</a>
+<a class="text-slate-500 hover:text-primary transition-colors font-label text-sm uppercase tracking-wider font-medium" href="#">Rewards</a>
+<a class="text-primary font-bold font-label text-sm uppercase tracking-wider" href="#">Admin</a>
+<a class="text-slate-500 hover:text-primary transition-colors font-label text-sm uppercase tracking-wider font-medium" href="#">Profile</a>
+</nav>
+<div class="flex items-center gap-3">
+<button class="p-2 rounded-full hover:bg-[#dde3ee] transition-colors text-slate-500">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</div>
+</header>
+<main class="max-w-7xl mx-auto px-6 py-8 pb-32">
+<!-- Header Section -->
+<div class="flex flex-col md:flex-row md:items-end justify-between gap-6 mb-10">
+<div>
+<nav class="flex items-center gap-2 text-label-md text-primary mb-2">
+<span class="font-label text-xs font-medium uppercase tracking-widest">Admin Dashboard</span>
+<span class="material-symbols-outlined text-sm">chevron_right</span>
+<span class="font-label text-xs font-medium uppercase tracking-widest opacity-60">Content Architect</span>
+</nav>
+<h2 class="font-headline text-3xl font-bold text-on-surface">Upload New Lesson</h2>
+<p class="text-on-surface-variant mt-1 max-w-xl">Create structured IELTS modules with integrated media, transcripts, and interactive assessments.</p>
+</div>
+<div class="flex items-center gap-3">
+<button class="px-6 py-2.5 rounded-full bg-surface-container-high text-primary font-bold hover:bg-surface-container-highest transition-all active:scale-95">
+                    Preview Mode
+                </button>
+<button class="px-8 py-2.5 rounded-full bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold scholar-shadow hover:opacity-90 transition-all active:scale-95">
+                    Publish Lesson
+                </button>
+</div>
+</div>
+<!-- Bento Grid Layout -->
+<div class="grid grid-cols-12 gap-6">
+<!-- Left Column: Primary Details -->
+<div class="col-span-12 lg:col-span-7 space-y-6">
+<!-- Core Meta Card -->
+<section class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow">
+<h3 class="font-headline text-lg font-bold mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">edit_note</span>
+                        Lesson Metadata
+                    </h3>
+<div class="space-y-6">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Lesson Title</label>
+<input class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/10 font-body text-on-surface placeholder:text-outline-variant" placeholder="e.g., Mastering the Academic Writing Task 1" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Level / Band Target</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/10 font-body text-on-surface appearance-none">
+<option>Foundation (4.0 - 5.0)</option>
+<option>Intermediate (5.5 - 6.5)</option>
+<option selected="">Advanced (7.0 - 8.5)</option>
+<option>Expert (9.0)</option>
+</select>
+</div>
+<div class="space-y-2">
+<label class="font-label text-xs font-bold uppercase tracking-widest text-primary">Skill Category</label>
+<select class="w-full bg-surface-container-low border-none rounded-xl p-4 focus:ring-2 focus:ring-primary/10 font-body text-on-surface appearance-none">
+<option>Listening</option>
+<option>Reading</option>
+<option selected="">Writing</option>
+<option>Speaking</option>
+</select>
+</div>
+</div>
+</div>
+</section>
+<!-- Media Upload Bento Section -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- PDF Upload -->
+<div class="bg-surface-container-low p-6 rounded-3xl border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-2xl bg-white mb-4 flex items-center justify-center text-primary scholar-shadow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">picture_as_pdf</span>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Reading Material</h4>
+<p class="font-label text-xs text-on-surface-variant mt-1">Upload PDF (Max 10MB)</p>
+<button class="mt-4 px-4 py-2 rounded-full bg-white text-primary text-xs font-bold scholar-shadow">Choose File</button>
+</div>
+<!-- MP3 Upload -->
+<div class="bg-surface-container-low p-6 rounded-3xl border-2 border-dashed border-outline-variant/30 flex flex-col items-center justify-center text-center group cursor-pointer hover:bg-surface-container-high transition-colors">
+<div class="w-16 h-16 rounded-2xl bg-white mb-4 flex items-center justify-center text-secondary scholar-shadow group-hover:scale-110 transition-transform">
+<span class="material-symbols-outlined text-3xl">audio_file</span>
+</div>
+<h4 class="font-headline font-bold text-on-surface">Audio Component</h4>
+<p class="font-label text-xs text-on-surface-variant mt-1">Upload MP3/WAV (Max 50MB)</p>
+<button class="mt-4 px-4 py-2 rounded-full bg-white text-secondary text-xs font-bold scholar-shadow">Choose File</button>
+</div>
+</div>
+<!-- Homework JSON Editor / Form -->
+<section class="bg-surface-container-lowest p-8 rounded-3xl scholar-shadow">
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-lg font-bold flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">quiz</span>
+                            Assessment Builder
+                        </h3>
+<div class="flex gap-2">
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">code</span>
+</button>
+<button class="p-2 rounded-lg bg-surface-container-low text-primary hover:bg-primary hover:text-white transition-all">
+<span class="material-symbols-outlined text-sm">add_circle</span>
+</button>
+</div>
+</div>
+<div class="space-y-4">
+<!-- Dynamic Question Card 1 -->
+<div class="p-5 rounded-2xl bg-surface-container-low relative overflow-hidden">
+<div class="absolute top-0 left-0 w-1 h-full bg-secondary"></div>
+<div class="flex justify-between items-start mb-3">
+<span class="font-label text-[10px] font-bold uppercase tracking-widest text-secondary">Question 01 • Multiple Choice</span>
+<button class="text-error opacity-40 hover:opacity-100 transition-opacity">
+<span class="material-symbols-outlined text-lg">delete</span>
+</button>
+</div>
+<input class="w-full bg-transparent border-none p-0 focus:ring-0 font-headline font-semibold text-on-surface mb-4" type="text" value="What is the primary purpose of the writer's argument in Paragraph 3?"/>
+<div class="space-y-2">
+<div class="flex items-center gap-3 bg-white p-3 rounded-xl">
+<div class="w-4 h-4 rounded-full border-2 border-secondary bg-secondary"></div>
+<span class="text-sm">To critique previous methodology</span>
+</div>
+<div class="flex items-center gap-3 bg-white/50 p-3 rounded-xl">
+<div class="w-4 h-4 rounded-full border-2 border-outline-variant"></div>
+<span class="text-sm">To introduce a new character</span>
+</div>
+</div>
+</div>
+<!-- Question 2 (JSON View State Concept) -->
+<div class="p-5 rounded-2xl bg-on-surface text-white font-mono text-xs overflow-x-auto">
+<pre><code>{
+  "id": "q_02",
+  "type": "short_answer",
+  "prompt": "Summarize the findings in 50 words...",
+  "points": 5,
+  "validation": {
+    "min_words": 40,
+    "max_words": 60
+  }
+}</code></pre>
+</div>
+</div>
+</section>
+</div>
+<!-- Right Column: Sidebar & Analytics -->
+<div class="col-span-12 lg:col-span-5 space-y-6">
+<!-- Lesson Preview Sidebar -->
+<section class="bg-surface-container p-8 rounded-3xl sticky top-28">
+<h3 class="font-headline text-lg font-bold mb-6">Live Preview Summary</h3>
+<div class="relative rounded-2xl overflow-hidden mb-6 aspect-video scholar-shadow">
+<img alt="Lesson Cover" class="w-full h-full object-cover" data-alt="aesthetic overhead shot of a clean study desk with an open textbook, a fountain pen, and a cup of tea in morning sunlight" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCc2eG3OX54LcT4POH9ZnimDZs_2XdvP_OAkAP7TYhTHtWAYad6EPmqO0dnGVbCJ17dLaOkwPNsbijrA1f9NMRiIgjSH2xwZgrVE2P8RXukOF3uJmcytn60nv4_ds-1QzCQKDvaWIGB3wjV2AqtZd-U9CK8F7qYhjY94ie0soPyhLQyHDYyFI-PhXbFJDR8ijmBdQgfj6vT2R4p8oMkomZQjesx-DBCAw8qunE9a0F5NI5rIk6a3XJ0XHkn_N3mCHLmk6VxZjzY8U"/>
+<div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex flex-col justify-end p-4">
+<span class="inline-block bg-secondary text-white text-[10px] font-bold uppercase px-2 py-1 rounded mb-2 w-fit">Advanced Module</span>
+<h4 class="text-white font-headline font-bold text-lg leading-tight">Mastering the Academic Writing Task 1</h4>
+</div>
+</div>
+<div class="space-y-4">
+<div class="flex items-center justify-between p-4 bg-white/50 rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-primary">description</span>
+<span class="text-sm font-medium">Writing_Guide_V2.pdf</span>
+</div>
+<span class="text-xs text-outline font-label">2.4 MB</span>
+</div>
+<div class="flex items-center justify-between p-4 bg-white/50 rounded-2xl">
+<div class="flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary">mic</span>
+<span class="text-sm font-medium">Lecture_Audio.mp3</span>
+</div>
+<span class="text-xs text-outline font-label">18:42</span>
+</div>
+</div>
+<!-- Readiness Score -->
+<div class="mt-10 pt-8 border-t border-outline-variant/20">
+<div class="flex justify-between items-end mb-2">
+<span class="font-label text-xs font-bold uppercase tracking-widest text-on-surface-variant">Content Quality Score</span>
+<span class="font-headline text-2xl font-extrabold text-secondary">85%</span>
+</div>
+<div class="h-2 w-full bg-white rounded-full overflow-hidden">
+<div class="h-full bg-secondary" style="width: 85%"></div>
+</div>
+<ul class="mt-4 space-y-2">
+<li class="flex items-center gap-2 text-xs text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                Transcript generated
+                            </li>
+<li class="flex items-center gap-2 text-xs text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+                                2/2 Questions validated
+                            </li>
+<li class="flex items-center gap-2 text-xs text-primary/60">
+<span class="material-symbols-outlined text-sm">info</span>
+                                Missing meta tags for SEO
+                            </li>
+</ul>
+</div>
+</section>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 w-full z-50 rounded-t-[1.5rem] bg-white/80 dark:bg-slate-900/80 backdrop-blur-md shadow-[0_-4px_20px_rgba(0,0,0,0.03)] border-t border-surface-container">
+<div class="flex justify-around items-center w-full px-4 pb-6 pt-3">
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-primary transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="analytics">analytics</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-wider mt-1">Portfolio</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-primary transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="military_tech">military_tech</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-wider mt-1">Rewards</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#002c98] dark:text-blue-300 bg-[#eef4ff] dark:bg-blue-900/30 rounded-xl px-3 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="admin_panel_settings">admin_panel_settings</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-wider mt-1">Admin</span>
+</a>
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 hover:text-primary transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="account_circle">account_circle</span>
+<span class="font-label text-[10px] font-medium uppercase tracking-wider mt-1">Profile</span>
+</a>
+</div>
+</nav>
+</body></html>

@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Academic Architect | Admin Dashboard</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Icons -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#2f53ce",
+                        "surface-dim": "#d5dae5",
+                        "inverse-primary": "#b7c4ff",
+                        "surface-variant": "#dde3ee",
+                        "tertiary-container": "#005d22",
+                        "secondary": "#1b6d24",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004317",
+                        "surface-container-highest": "#dde3ee",
+                        "outline-variant": "#c4c5d6",
+                        "on-tertiary-container": "#35de66",
+                        "on-primary-fixed": "#001453",
+                        "inverse-surface": "#2b3139",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#002108",
+                        "inverse-on-surface": "#ecf1fc",
+                        "surface-container-high": "#e3e8f4",
+                        "outline": "#747685",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "on-surface": "#161c24",
+                        "secondary-fixed-dim": "#88d982",
+                        "background": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "primary": "#002c98",
+                        "on-background": "#161c24",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#eef4ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e9eef9",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-secondary-fixed": "#002204",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-secondary-fixed-variant": "#005312",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#217128",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "secondary-fixed": "#a3f69c",
+                        "secondary-container": "#a0f399",
+                        "on-primary-container": "#b2bfff",
+                        "primary-container": "#1a43bf",
+                        "on-surface-variant": "#444654",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9ff;
+        }
+        .scholar-shadow {
+            shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)];
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-slate-50/80 backdrop-blur-xl flex items-center justify-between px-6 py-4 w-full shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-primary-fixed flex items-center justify-center">
+<img alt="Admin Profile" class="w-full h-full object-cover" data-alt="Close-up professional portrait of a scholarly administrator in a well-lit office with a soft-focus bookshelf background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBY50Rze2byr9S90Y21KXAS1EVqWvYjc44gAf4hS62F6VlS1l8eHcuzzfFBcbKJS-pDswm-qUFndUB8iKcV2V-0PaIAqGfWWvfVnBMVubLSSpQs_7twN0TlX7e5ykfyXj-gb3ZT1RSIe2htn3eVztsv9uLd8ytHo9oxagGKID9H7WysSHMmH9Mu3x6BkkyBN-BBkw8wMok5btPNPhcz_uS5weZkjsSGFrg1VC0Dt2xm4V4rlCRZNVCUWlCJgaAKc3waLUElML6eOsE"/>
+</div>
+<h1 class="text-xl font-bold text-blue-900 tracking-tight font-headline">The Academic Architect</h1>
+</div>
+<div class="flex items-center gap-4">
+<button class="p-2 rounded-xl hover:bg-blue-50/50 transition-colors active:scale-95 duration-200 text-slate-500">
+<span class="material-symbols-outlined">settings_suggest</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-7xl mx-auto">
+<!-- Overview Bento Grid -->
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6 mb-12">
+<!-- Total Students Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary to-primary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Total Students</p>
+<h2 class="font-headline text-4xl font-extrabold text-primary">1,284</h2>
+</div>
+<div class="p-3 bg-primary-fixed rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+</div>
+</div>
+<p class="mt-4 text-secondary font-label text-sm font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-sm">trending_up</span> +12% this month
+                </p>
+</div>
+<!-- Pending Unlocks Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-secondary to-on-secondary-container"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Pending Unlocks</p>
+<h2 class="font-headline text-4xl font-extrabold text-secondary">24</h2>
+</div>
+<div class="p-3 bg-secondary-container rounded-xl text-on-secondary-container">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">lock_open</span>
+</div>
+</div>
+<p class="mt-4 text-on-surface-variant font-label text-sm italic">Waiting for receipt verification</p>
+</div>
+<!-- Active Submissions Card -->
+<div class="relative overflow-hidden bg-surface-container-lowest rounded-xl p-8 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] group">
+<div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-primary-container to-primary"></div>
+<div class="flex justify-between items-start">
+<div>
+<p class="font-label text-xs uppercase tracking-widest text-on-surface-variant font-semibold mb-2">Submission Queue</p>
+<h2 class="font-headline text-4xl font-extrabold text-primary-container">56</h2>
+</div>
+<div class="p-3 bg-surface-container-high rounded-xl text-primary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">history_edu</span>
+</div>
+</div>
+<div class="mt-4 w-full bg-surface-container-low h-1.5 rounded-full overflow-hidden">
+<div class="bg-primary h-full w-[65%]"></div>
+</div>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+<!-- Unlock Requests Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-xl font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">receipt_long</span>
+                        Unlock Requests
+                    </h3>
+<span class="bg-surface-container-high px-3 py-1 rounded-full text-xs font-bold text-primary">24 TOTAL</span>
+</div>
+<div class="space-y-4">
+<!-- Request Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.04)] flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Headshot of a focused student with glasses in a casual indoor setting with natural window lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBn9wDgwNF0t5LEC9JoxwZqAqejQUzM2U8B4mUCHJregmY-CBzCnfLw9pixQs6OYJIdv6W_hrVlSZ-TckSqsIqvCqDilgf8bGxyucAIgVzLEDJZAbvOUj8cEF9_Qb4nrZHzjDQLsJJGhxbROHsW6Gl0dpdifAj94TH1sFLCer2zKL84TMl0dQrzavna1KGPbPu69n0f-e03-efZUfZHRV8Dh1Y9aMcc-ROw0OybC_ReU1oYIG97Xqt-I3cQ63vJM8JuWLrkwUFcU9Q"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Alex Thompson</h4>
+<p class="text-xs font-label text-on-surface-variant">ID: 982103</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-high text-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-surface-variant transition-colors">
+                                View Receipt
+                            </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary-container transition-colors shadow-sm">
+                                Unlock
+                            </button>
+</div>
+</div>
+<!-- Request Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.04)] flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Smiling female university student looking at camera in a bright contemporary study hall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBu8Jdt4ApeUVpWlueXK5v-6EuZWcs-QYxDBXy2iFydX9kov5Fh6G2PpfI1w9bF8ssMZ22FRVVN_aQkyv8gc9WAs5g-SqRcMopw733rgOGgUXXn59ItvY9Izd4GAqwT54cHRYY5wjm8pmKd8amEtfdsxtN8lDSIrB-uGdqRNrMzKY0abNREt1Wrdxsxs5tJq44OpLDhUwwCjuvODytTJlsl-65CvKhMmMnm-W66iFMPpObPMSi-VyTbCCpFI2v3AXfCHt7T6ZCyQbI"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Elena Rodriguez</h4>
+<p class="text-xs font-label text-on-surface-variant">ID: 772145</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-high text-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-surface-variant transition-colors">
+                                View Receipt
+                            </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary-container transition-colors shadow-sm">
+                                Unlock
+                            </button>
+</div>
+</div>
+<!-- Request Item -->
+<div class="bg-surface-container-lowest p-5 rounded-2xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.04)] flex items-center justify-between">
+<div class="flex items-center gap-4">
+<div class="w-12 h-12 rounded-xl bg-surface-container overflow-hidden">
+<img alt="Student" class="w-full h-full object-cover" data-alt="Professional headshot of a young male with short hair against a clean neutral wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBQrnjozV9a2Y7QHEOwrmpIvYQU_BqGV8jmHTyJCdLc229dg_1GzB-rmTGNp2p3k2ETU0jRWOZR6Q7l9dO70eiebwv2V0T5GWrscArdQ5yOYDUMMI3SmMVPtnZ4BQNuHRRabQ4EIIVxb8WpmK5oTAQ3GllX5eP-a9IgARtWpuNLGQLcyqBsTMokV-oOrdCWg2noCPm8OvhStPghu2J_Yfxb8afql-IFUDLRMsuBuQGfg1lYsjLUP9cSHfDGqzRmQGFuu7st9qvrTJ0"/>
+</div>
+<div>
+<h4 class="font-bold text-on-surface">Marcus Chen</h4>
+<p class="text-xs font-label text-on-surface-variant">ID: 883901</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<button class="bg-surface-container-high text-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-surface-variant transition-colors">
+                                View Receipt
+                            </button>
+<button class="bg-primary text-on-primary px-4 py-2 rounded-xl text-sm font-semibold hover:bg-primary-container transition-colors shadow-sm">
+                                Unlock
+                            </button>
+</div>
+</div>
+</div>
+</section>
+<!-- Submission Queue Section -->
+<section>
+<div class="flex items-center justify-between mb-6">
+<h3 class="font-headline text-xl font-bold text-on-surface flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary">pending_actions</span>
+                        Submission Queue
+                    </h3>
+<div class="flex gap-2">
+<span class="bg-secondary-container px-3 py-1 rounded-full text-[10px] font-bold text-on-secondary-container uppercase">Manual Review Required</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-2 space-y-2">
+<!-- Task Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">edit_note</span>
+<span class="font-bold text-on-surface">IELTS Writing Task 2</span>
+</div>
+<p class="text-sm text-on-surface-variant">The influence of social media on young generations...</p>
+</div>
+<span class="text-[10px] font-label font-bold text-primary-container bg-primary-fixed px-2 py-1 rounded">20 MIN AGO</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex -space-x-2">
+<div class="w-8 h-8 rounded-full border-2 border-white bg-blue-100 flex items-center justify-center text-[10px] font-bold">JD</div>
+<div class="w-8 h-8 rounded-full border-2 border-white bg-green-100 flex items-center justify-center text-[10px] font-bold">MK</div>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-sm group">
+                                Start Review
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Task Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">mic</span>
+<span class="font-bold text-on-surface">IELTS Speaking Part 1</span>
+</div>
+<p class="text-sm text-on-surface-variant">Topic: Hometown and Work</p>
+</div>
+<span class="text-[10px] font-label font-bold text-error bg-error-container px-2 py-1 rounded uppercase">Priority</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">timer</span>
+<span class="text-xs text-on-surface-variant font-medium">Wait time: 4h 12m</span>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-sm group">
+                                Listen &amp; Rate
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+<!-- Task Item -->
+<div class="bg-surface-container-lowest p-6 rounded-2xl flex flex-col gap-4">
+<div class="flex justify-between items-start">
+<div>
+<div class="flex items-center gap-2 mb-1">
+<span class="material-symbols-outlined text-primary text-lg">edit_note</span>
+<span class="font-bold text-on-surface">IELTS Writing Task 1</span>
+</div>
+<p class="text-sm text-on-surface-variant">Line graph: Population growth in urban areas...</p>
+</div>
+<span class="text-[10px] font-label font-bold text-on-surface-variant bg-surface-container-high px-2 py-1 rounded">2 HOURS AGO</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-on-surface-variant">neurology</span>
+<span class="text-xs text-on-surface-variant font-medium italic">AI Initial Pass Completed</span>
+</div>
+<button class="flex items-center gap-2 text-secondary font-bold text-sm group">
+                                Verify AI
+                                <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</div>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 pb-6 pt-2 bg-white shadow-[0_-8px_24px_-4px_rgba(22,28,36,0.06)] rounded-t-3xl border-t-0">
+<!-- Students (Active) -->
+<a class="flex flex-col items-center justify-center bg-blue-50 text-blue-900 rounded-xl py-2 px-6 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">group</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Students</span>
+</a>
+<!-- Submissions -->
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 px-6 hover:text-blue-700 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">history_edu</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Submissions</span>
+</a>
+<!-- Automation -->
+<a class="flex flex-col items-center justify-center text-slate-400 py-2 px-6 hover:text-blue-700 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined">precision_manufacturing</span>
+<span class="font-inter text-[11px] font-semibold uppercase tracking-wider mt-1">Automation</span>
+</a>
+</nav>
+</body></html>

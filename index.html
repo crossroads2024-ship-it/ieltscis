@@ -1,239 +1,87 @@
 <!DOCTYPE html>
-
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>The Academic Architect - Dashboard</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            "colors": {
-                    "surface-bright": "#f8f9ff",
-                    "on-secondary-container": "#217128",
-                    "on-surface": "#161c24",
-                    "surface": "#f8f9ff",
-                    "on-secondary-fixed": "#002204",
-                    "primary-fixed-dim": "#b7c4ff",
-                    "surface-container": "#e9eef9",
-                    "primary-container": "#1a43bf",
-                    "surface-tint": "#2f53ce",
-                    "tertiary-container": "#005d22",
-                    "on-secondary": "#ffffff",
-                    "surface-dim": "#d5dae5",
-                    "secondary-fixed": "#a3f69c",
-                    "on-primary": "#ffffff",
-                    "error-container": "#ffdad6",
-                    "on-error-container": "#93000a",
-                    "error": "#ba1a1a",
-                    "inverse-surface": "#2b3139",
-                    "surface-container-low": "#eef4ff",
-                    "surface-container-high": "#e3e8f4",
-                    "on-background": "#161c24",
-                    "on-secondary-fixed-variant": "#005312",
-                    "secondary-container": "#a0f399",
-                    "on-error": "#ffffff",
-                    "on-tertiary-container": "#35de66",
-                    "outline": "#747685",
-                    "background": "#f8f9ff",
-                    "secondary-fixed-dim": "#88d982",
-                    "tertiary-fixed": "#69ff87",
-                    "on-primary-fixed": "#001453",
-                    "on-tertiary": "#ffffff",
-                    "on-surface-variant": "#444654",
-                    "tertiary": "#004317",
-                    "tertiary-fixed-dim": "#3ce36a",
-                    "on-tertiary-fixed": "#002108",
-                    "primary": "#002c98",
-                    "on-primary-container": "#b2bfff",
-                    "on-primary-fixed-variant": "#0438b6",
-                    "primary-fixed": "#dde1ff",
-                    "surface-container-highest": "#dde3ee",
-                    "on-tertiary-fixed-variant": "#00531e",
-                    "outline-variant": "#c4c5d6",
-                    "secondary": "#1b6d24",
-                    "surface-container-lowest": "#ffffff",
-                    "surface-variant": "#dde3ee",
-                    "inverse-on-surface": "#ecf1fc",
-                    "inverse-primary": "#b7c4ff"
-            },
-            "borderRadius": {
-                    "DEFAULT": "0.25rem",
-                    "lg": "0.5rem",
-                    "xl": "0.75rem",
-                    "full": "9999px"
-            },
-            "fontFamily": {
-                    "headline": ["Manrope"],
-                    "body": ["Public Sans"],
-                    "label": ["Inter"]
-            }
-          },
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://telegram.org/js/telegram-web-app.js"></script>
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: Arial, sans-serif; background: #1a1a2e; color: white; }
+        iframe { width: 100%; height: 100vh; border: none; }
+        .nav {
+            position: fixed; bottom: 0; left: 0; right: 0;
+            background: #2a2a4e; padding: 10px;
+            display: flex; justify-content: space-around;
+            z-index: 999;
         }
-      }
-    </script>
-<style>
-      .material-symbols-outlined {
-        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-      }
-      .font-manrope { font-family: 'Manrope', sans-serif; }
-      .font-inter { font-family: 'Inter', sans-serif; }
-      .font-public-sans { font-family: 'Public Sans', sans-serif; }
+        .nav button {
+            background: #4CAF50; color: white;
+            border: none; padding: 8px 12px;
+            border-radius: 8px; font-size: 12px;
+            cursor: pointer;
+        }
+        .nav button:hover { background: #45a049; }
+        .screen { display: none; width: 100%; height: calc(100vh - 60px); overflow-y: auto; }
+        .screen.active { display: block; }
     </style>
-<style>
-    body {
-      min-height: max(884px, 100dvh);
+</head>
+<body>
+
+<!-- ALL SCREENS -->
+<div id="onboarding" class="screen active">
+    <iframe src="onboarding_locked_state/code.html"></iframe>
+</div>
+
+<div id="dashboard" class="screen">
+    <iframe src="dashboard_unlocked/code.html"></iframe>
+</div>
+
+<div id="lessons" class="screen">
+    <iframe src="lesson_view/code.html"></iframe>
+</div>
+
+<div id="writing" class="screen">
+    <iframe src="ai_writing_evaluation/code.html"></iframe>
+</div>
+
+<div id="speaking" class="screen">
+    <iframe src="speaking_practice/code.html"></iframe>
+</div>
+
+<div id="homework" class="screen">
+    <iframe src="homework_module/code.html"></iframe>
+</div>
+
+<div id="progress" class="screen">
+    <iframe src="progress_gamification/code.html"></iframe>
+</div>
+
+<div id="payment" class="screen">
+    <iframe src="payment_enrollment/code.html"></iframe>
+</div>
+
+<!-- BOTTOM NAVIGATION -->
+<div class="nav">
+    <button onclick="showScreen('dashboard')">🏠 Home</button>
+    <button onclick="showScreen('lessons')">📖 Lessons</button>
+    <button onclick="showScreen('writing')">✍️ Writing</button>
+    <button onclick="showScreen('speaking')">🎤 Speaking</button>
+    <button onclick="showScreen('progress')">📈 Progress</button>
+</div>
+
+<script>
+    window.Telegram.WebApp.ready();
+    window.Telegram.WebApp.expand();
+
+    function showScreen(screenId) {
+        document.querySelectorAll('.screen').forEach(s => {
+            s.classList.remove('active');
+        });
+        document.getElementById(screenId).classList.add('active');
     }
-  </style>
-  </head>
-<body class="bg-surface text-on-surface font-body selection:bg-primary-fixed">
-<!-- TopAppBar -->
-<header class="bg-[#f8f9ff]/80 dark:bg-[#161c24]/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] flex items-center justify-between px-6 py-4 w-full">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
-<img alt="Scholar Bot Avatar" class="w-full h-full object-cover" data-alt="close-up 3D render of a friendly academic owl robot wearing graduation cap, high detail, studio lighting, deep blue color scheme" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDLdYcTsyurhM0dJ4nVzBfm-melKnt6eZCptaFJyFk6mpo_VZlXhwelim8TMnV1iQwkGo6vC9le8tU6EAyhLiEqYte8te4s8Cn-5I1_HsLIeoKGcV1Tt0O8BP29XG6gzpP5tpQdw14eBsPgDnUpPqLiiaPNJBhycDch86vCIDCkiTFrAc5NIpeTW6QppXQ_DPBd4AqPx6fnydCQ2vFNjZ7-MqnwJadx9oxkkGiFokTOBKF23V9IFmuSCbTJwXECnSk9psBJEhekWys"/>
-</div>
-<h1 class="font-manrope font-extrabold text-[#002c98] dark:text-white text-lg tracking-tight">The Academic Architect</h1>
-</div>
-<button class="w-10 h-10 flex items-center justify-center rounded-full hover:bg-[#dde3ee]/50 transition-colors duration-200">
-<span class="material-symbols-outlined text-[#002c98] dark:text-[#eef4ff]">more_vert</span>
-</button>
-</header>
-<main class="px-6 pt-4 pb-24 space-y-8">
-<!-- Daily Streak Hero (Bento Style) -->
-<section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-tr from-[#002c98] to-[#1a43bf] p-6 text-white shadow-xl">
-<div class="relative z-10 flex flex-col justify-between h-full">
-<div class="flex justify-between items-start">
-<div>
-<p class="font-label text-xs uppercase tracking-[0.2em] opacity-80 mb-1">Consistency is Key</p>
-<h2 class="font-headline text-3xl font-extrabold">5 Day Streak</h2>
-</div>
-<div class="bg-white/20 backdrop-blur-md p-3 rounded-2xl">
-<span class="material-symbols-outlined text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
-</div>
-</div>
-<div class="mt-8">
-<p class="font-body text-sm leading-relaxed max-w-[200px]">You're outperforming 85% of scholars this week. Keep the momentum!</p>
-</div>
-</div>
-<!-- Decorative background element -->
-<div class="absolute -right-10 -bottom-10 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
-</section>
-<!-- Progress Overview (Tonal Shift) -->
-<section class="bg-surface-container-low rounded-xl p-6">
-<div class="flex justify-between items-end mb-4">
-<h3 class="font-headline font-bold text-lg">Course Progress</h3>
-<span class="font-label font-bold text-primary text-sm">25%</span>
-</div>
-<div class="w-full h-3 bg-surface-container-highest rounded-full overflow-hidden">
-<div class="h-full bg-secondary rounded-full w-1/4"></div>
-</div>
-<p class="font-label text-[10px] uppercase tracking-wider text-outline mt-3">8 of 32 Lessons Completed</p>
-</section>
-<!-- Next Lesson Card (Glassmorphism / Layered) -->
-<section>
-<h3 class="font-headline font-bold text-lg mb-4 flex items-center gap-2">
-                Up Next
-                <span class="h-px flex-1 bg-surface-container-high ml-2"></span>
-</h3>
-<div class="group relative bg-surface-container-lowest rounded-3xl p-6 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] border border-outline-variant/15 overflow-hidden">
-<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
-<div class="flex flex-col gap-4">
-<div class="flex items-start justify-between">
-<div>
-<span class="font-label text-[10px] font-semibold text-secondary-container bg-secondary px-2 py-0.5 rounded-full uppercase">Lesson 3</span>
-<h4 class="font-headline text-xl font-bold mt-2 text-on-surface">Reading Strategies</h4>
-<p class="font-body text-sm text-on-surface-variant italic">(Intermediate)</p>
-</div>
-<span class="material-symbols-outlined text-primary-container text-4xl">auto_stories</span>
-</div>
-<button class="w-full bg-gradient-to-r from-primary to-primary-container text-white font-manrope font-bold py-4 rounded-full shadow-lg hover:scale-[0.98] transition-transform flex items-center justify-center gap-2">
-                        Start Lesson
-                        <span class="material-symbols-outlined">play_circle</span>
-</button>
-</div>
-</div>
-</section>
-<!-- Recent Scores (Asymmetric Grid) -->
-<section>
-<div class="flex justify-between items-center mb-4">
-<h3 class="font-headline font-bold text-lg">AI Evaluations</h3>
-<button class="font-label text-primary text-xs font-semibold uppercase tracking-wider hover:underline">My Stats</button>
-</div>
-<div class="grid grid-cols-2 gap-4">
-<!-- Writing Score -->
-<div class="bg-surface-container-low rounded-2xl p-5 flex flex-col justify-between aspect-square">
-<span class="material-symbols-outlined text-primary opacity-60">edit_square</span>
-<div>
-<p class="font-label text-[10px] uppercase text-outline">Writing</p>
-<div class="flex items-baseline gap-1">
-<span class="font-headline text-3xl font-extrabold text-on-surface">7.0</span>
-<span class="font-label text-[10px] text-secondary font-bold">▲ 0.5</span>
-</div>
-</div>
-</div>
-<!-- Speaking Score -->
-<div class="bg-surface-container-low rounded-2xl p-5 flex flex-col justify-between aspect-square">
-<span class="material-symbols-outlined text-primary opacity-60">mic</span>
-<div>
-<p class="font-label text-[10px] uppercase text-outline">Speaking</p>
-<div class="flex items-baseline gap-1">
-<span class="font-headline text-3xl font-extrabold text-on-surface">6.5</span>
-<span class="font-label text-[10px] text-outline font-bold">Stable</span>
-</div>
-</div>
-</div>
-</div>
-</section>
-<!-- Homework Queue (Tonal Depth) -->
-<section class="bg-surface-container-low rounded-[1.5rem] p-6 relative overflow-hidden">
-<div class="flex items-center justify-between mb-4">
-<div class="flex items-center gap-3">
-<div class="w-10 h-10 rounded-xl bg-error-container flex items-center justify-center text-on-error-container">
-<span class="material-symbols-outlined">assignment_late</span>
-</div>
-<div>
-<h4 class="font-headline font-bold">Homework Queue</h4>
-<p class="font-label text-[10px] text-on-surface-variant">2 Tasks Pending</p>
-</div>
-</div>
-<button class="p-2 rounded-full bg-surface-container-highest hover:bg-surface-container-high transition-colors">
-<span class="material-symbols-outlined text-on-surface">chevron_right</span>
-</button>
-</div>
-<!-- Queue preview item -->
-<div class="bg-surface-container-lowest rounded-xl p-3 flex items-center gap-3 border border-outline-variant/10">
-<div class="w-2 h-2 rounded-full bg-primary"></div>
-<span class="font-body text-sm font-medium">Vocabulary Quiz: Unit 4</span>
-</div>
-</section>
-</main>
-<!-- BottomNavBar -->
-<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-4 bg-surface-bright dark:bg-[#161c24] rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.04)] z-50">
-<!-- Lessons (Inactive) -->
-<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] dark:hover:text-white" href="#">
-<span class="material-symbols-outlined mb-1">menu_book</span>
-<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Lessons</span>
-</a>
-<!-- Progress (Active) -->
-<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#002c98] to-[#1a43bf] text-white rounded-full p-3 mb-2 transform -translate-y-2 animate-pulse-subtle scale-105" href="#">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_graph</span>
-<span class="font-inter font-medium text-[10px] uppercase tracking-wider mt-1">Progress</span>
-</a>
-<!-- Homework (Inactive) -->
-<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] dark:hover:text-white" href="#">
-<span class="material-symbols-outlined mb-1">edit_note</span>
-<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Homework</span>
-</a>
-<!-- Settings (Inactive) -->
-<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] dark:hover:text-white" href="#">
-<span class="material-symbols-outlined mb-1">settings</span>
-<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Settings</span>
-</a>
-</nav>
-<!-- FAB Suppression: On Dashboard/Main Menu, FAB is suppressed per mandate unless primary action aligns perfectly. "Start Lesson" is already prominent as a large card. -->
-</body></html>
+
+    // Start on onboarding
+    showScreen('onboarding');
+</script>
+
+</body>
+</html>

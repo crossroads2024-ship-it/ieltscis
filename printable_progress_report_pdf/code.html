@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IELTS Scholar Report - Alex Rivers</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface": "#f8f9ff",
+                        "error": "#ba1a1a",
+                        "surface-tint": "#2f53ce",
+                        "surface-dim": "#d5dae5",
+                        "inverse-primary": "#b7c4ff",
+                        "surface-variant": "#dde3ee",
+                        "tertiary-container": "#005d22",
+                        "secondary": "#1b6d24",
+                        "on-secondary": "#ffffff",
+                        "tertiary": "#004317",
+                        "surface-container-highest": "#dde3ee",
+                        "outline-variant": "#c4c5d6",
+                        "on-tertiary-container": "#35de66",
+                        "on-primary-fixed": "#001453",
+                        "inverse-surface": "#2b3139",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary": "#ffffff",
+                        "on-tertiary-fixed": "#002108",
+                        "inverse-on-surface": "#ecf1fc",
+                        "surface-container-high": "#e3e8f4",
+                        "outline": "#747685",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "on-surface": "#161c24",
+                        "secondary-fixed-dim": "#88d982",
+                        "background": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "primary": "#002c98",
+                        "on-background": "#161c24",
+                        "surface-container-lowest": "#ffffff",
+                        "on-error-container": "#93000a",
+                        "surface-container-low": "#eef4ff",
+                        "surface-bright": "#f8f9ff",
+                        "on-error": "#ffffff",
+                        "surface-container": "#e9eef9",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-secondary-fixed": "#002204",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-secondary-fixed-variant": "#005312",
+                        "error-container": "#ffdad6",
+                        "on-secondary-container": "#217128",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "secondary-fixed": "#a3f69c",
+                        "secondary-container": "#a0f399",
+                        "on-primary-container": "#b2bfff",
+                        "primary-container": "#1a43bf",
+                        "on-surface-variant": "#444654",
+                        "on-primary": "#ffffff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        @media print {
+            .no-print { display: none !important; }
+            .print-shadow { box-shadow: none !important; }
+            body { background: white !important; }
+            .report-canvas { width: 100% !important; margin: 0 !important; padding: 0 !important; }
+        }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .glass-panel {
+            background: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(20px);
+        }
+    </style>
+</head>
+<body class="bg-surface font-body text-on-surface leading-[1.6x]">
+<!-- Top Navigation (Shared Component: TopNavBar) -->
+<nav class="no-print sticky top-0 z-50 bg-white dark:bg-slate-950 border-b border-surface-container">
+<div class="flex justify-between items-center w-full px-8 py-4 max-w-7xl mx-auto">
+<div class="flex items-center gap-8">
+<span class="text-xl font-bold tracking-tight text-blue-900 dark:text-white font-headline">IELTS Scholar Report</span>
+<div class="hidden md:flex gap-6">
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 transition-colors" href="#">Dashboard</a>
+<a class="text-blue-900 dark:text-blue-400 font-bold border-b-2 border-blue-900 dark:border-blue-400 pb-1" href="#">Analytics</a>
+<a class="text-slate-500 dark:text-slate-400 font-medium hover:text-blue-700 transition-colors" href="#">Resources</a>
+</div>
+</div>
+<div class="flex gap-3">
+<button class="px-5 py-2 rounded-full bg-surface-container-high text-primary font-semibold hover:bg-surface-container-highest transition-all flex items-center gap-2">
+<span class="material-symbols-outlined text-[20px]">print</span>
+                    Print
+                </button>
+<button class="px-5 py-2 rounded-full bg-primary text-on-primary font-semibold hover:bg-primary-container transition-all flex items-center gap-2 shadow-lg shadow-primary/20">
+<span class="material-symbols-outlined text-[20px]">download</span>
+                    Download PDF
+                </button>
+</div>
+</div>
+</nav>
+<main class="max-w-5xl mx-auto py-12 px-6 md:px-12">
+<!-- PDF Document Wrapper -->
+<div class="report-canvas bg-white print-shadow rounded-xl p-12 min-h-[1100px] shadow-sm border border-outline-variant/15">
+<!-- Report Header -->
+<header class="flex justify-between items-start mb-16">
+<div>
+<h1 class="font-headline font-extrabold text-4xl text-primary tracking-tight mb-2">Student Performance Report</h1>
+<p class="text-on-surface-variant font-label uppercase tracking-widest text-xs">Generated on October 24, 2023 • Reference: #IS-99281</p>
+</div>
+<div class="text-right">
+<div class="font-headline font-bold text-lg text-primary">Alex Rivers</div>
+<div class="text-on-surface-variant text-sm">Target Band: 8.0</div>
+</div>
+</header>
+<!-- Hero Score Section -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Overall Band Score Card -->
+<div class="lg:col-span-4 bg-surface-container-low rounded-xl p-8 flex flex-col items-center justify-center text-center relative overflow-hidden">
+<div class="absolute top-0 left-0 w-full h-1 bg-secondary"></div>
+<span class="text-on-surface-variant font-label font-semibold text-xs uppercase tracking-widest mb-4">Overall Band Score</span>
+<div class="font-headline font-extrabold text-[84px] leading-none text-primary mb-2">7.5</div>
+<div class="px-4 py-1 bg-secondary-container text-on-secondary-container rounded-full text-xs font-bold">Good User</div>
+</div>
+<!-- Skill Breakdown Grid -->
+<div class="lg:col-span-8 grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high text-center">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest block mb-2">Listening</span>
+<div class="font-headline font-bold text-3xl text-primary">8.0</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high text-center">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest block mb-2">Reading</span>
+<div class="font-headline font-bold text-3xl text-primary">7.5</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
+<div class="bg-primary h-full rounded-full" style="width: 83%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high text-center">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest block mb-2">Writing</span>
+<div class="font-headline font-bold text-3xl text-primary">6.5</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
+<div class="bg-primary h-full rounded-full" style="width: 72%"></div>
+</div>
+</div>
+<div class="bg-surface-container-lowest rounded-xl p-6 border border-surface-container-high text-center">
+<span class="text-on-surface-variant font-label text-[10px] uppercase tracking-widest block mb-2">Speaking</span>
+<div class="font-headline font-bold text-3xl text-primary">8.0</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-4">
+<div class="bg-primary h-full rounded-full" style="width: 88%"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Progress Visualization (Bento Style) -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-8 mb-16">
+<!-- Improvement Chart Area -->
+<div class="lg:col-span-7 bg-surface-container-low rounded-xl p-8">
+<h3 class="font-headline font-bold text-xl mb-6 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary">trending_up</span>
+                        Progress Visualization
+                    </h3>
+<div class="h-64 flex items-end justify-between gap-4 px-2">
+<!-- Bar chart mockup -->
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/20 rounded-t-lg" style="height: 40%"></div>
+<span class="text-[10px] mt-2 font-label text-on-surface-variant">WK 1</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/40 rounded-t-lg" style="height: 55%"></div>
+<span class="text-[10px] mt-2 font-label text-on-surface-variant">WK 2</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/60 rounded-t-lg" style="height: 50%"></div>
+<span class="text-[10px] mt-2 font-label text-on-surface-variant">WK 3</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary/80 rounded-t-lg" style="height: 75%"></div>
+<span class="text-[10px] mt-2 font-label text-on-surface-variant">WK 4</span>
+</div>
+<div class="flex flex-col items-center flex-1">
+<div class="w-full bg-primary rounded-t-lg" style="height: 85%"></div>
+<span class="text-[10px] mt-2 font-label text-on-surface-variant">NOW</span>
+</div>
+</div>
+</div>
+<!-- Streaks & Achievements -->
+<div class="lg:col-span-5 flex flex-col gap-4">
+<div class="flex-1 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-secondary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-on-secondary-container text-3xl" style="font-variation-settings: 'FILL' 1;">local_fire_department</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-extrabold text-on-surface">7-Day Streak</div>
+<div class="text-sm text-secondary font-semibold">Keep it up! 3 days to gold.</div>
+</div>
+</div>
+<div class="flex-1 bg-surface-container-lowest border border-surface-container-high rounded-xl p-6 flex items-center gap-6">
+<div class="w-16 h-16 rounded-full bg-primary-fixed flex items-center justify-center">
+<span class="material-symbols-outlined text-primary text-3xl" style="font-variation-settings: 'FILL' 1;">school</span>
+</div>
+<div>
+<div class="text-3xl font-headline font-extrabold text-on-surface">142 Lessons</div>
+<div class="text-sm text-on-surface-variant">Total curriculum completed.</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Examiner's Trajectory -->
+<section class="mb-16">
+<div class="bg-surface rounded-xl p-10 border-l-4 border-primary">
+<h3 class="font-headline font-bold text-xl mb-4 text-primary">Examiner's Trajectory</h3>
+<div class="space-y-4 text-on-surface-variant text-lg">
+<p>Alex has shown exceptional growth in the <strong class="text-on-surface">Lexical Resource</strong> department, moving from a band 6.5 to 8.0 in speaking within the last month. The use of idiomatic expressions is becoming more natural and contextual.</p>
+<p>The primary area for focus remains <strong class="text-on-surface">Grammatical Range and Accuracy</strong> in formal writing. Specifically, working on complex sentence structures and punctuation consistency in Task 2 essays will be critical for reaching the target band 8.0.</p>
+<p>Overall, the trajectory is highly positive. If current study habits persist, the candidate is well-positioned for the upcoming November examination.</p>
+</div>
+</div>
+</section>
+<!-- Footer Meta -->
+<footer class="border-t border-surface-container-high pt-12 flex flex-col md:flex-row justify-between items-center text-on-surface-variant text-sm font-label">
+<div class="flex items-center gap-4 mb-4 md:mb-0">
+<img alt="Logo" class="h-8 grayscale opacity-50" data-alt="professional minimalist monochrome logo for an education brand with clean typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTJR1ebnGZEWRP0xJgW-HEKB3dY5G6h75XHeUTLWEDrBWj9ry8RS9hPFy4sc7shHY7KD_Rd2ZQUmKAQ_33aoXp5ypcLfn1U9zNt-bT-Wu4O0Vz5w9JZhdJUCdzJCRIptHHjseBuRRIM1R6wYBJqfQwugRyakLEmBPsSK7TOTjd2H65RzR0eSaArJgY9KGPIUWfSeCGn5603olAP7VcaFkGqiuAnp_kL5KpLnz6hwST1jUWmd6rTvKrHecxhyxVDsOYc7_LV0H_NsQ"/>
+<span>© 2023 IELTS Scholar AI Tutor</span>
+</div>
+<div class="flex gap-8">
+<span>ielts-scholar.io/verify/alex-rivers-75</span>
+<span class="font-bold">Page 1 of 1</span>
+</div>
+</footer>
+</div>
+</main>
+<!-- Contextual FAB (Hidden for Print) -->
+<div class="no-print fixed bottom-8 right-8 flex flex-col gap-4">
+<button class="w-14 h-14 bg-primary text-on-primary rounded-full shadow-2xl flex items-center justify-center hover:scale-105 transition-transform">
+<span class="material-symbols-outlined">help</span>
+</button>
+</div>
+</body></html>

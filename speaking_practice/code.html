@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IELTS Marathon Bot - Speaking Practice</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@300;400;500;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-bright": "#f8f9ff",
+                        "on-secondary-container": "#217128",
+                        "on-surface": "#161c24",
+                        "surface": "#f8f9ff",
+                        "on-secondary-fixed": "#002204",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-container": "#e9eef9",
+                        "primary-container": "#1a43bf",
+                        "surface-tint": "#2f53ce",
+                        "tertiary-container": "#005d22",
+                        "on-secondary": "#ffffff",
+                        "surface-dim": "#d5dae5",
+                        "secondary-fixed": "#a3f69c",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6",
+                        "on-error-container": "#93000a",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2b3139",
+                        "surface-container-low": "#eef4ff",
+                        "surface-container-high": "#e3e8f4",
+                        "on-background": "#161c24",
+                        "on-secondary-fixed-variant": "#005312",
+                        "secondary-container": "#a0f399",
+                        "on-error": "#ffffff",
+                        "on-tertiary-container": "#35de66",
+                        "outline": "#747685",
+                        "background": "#f8f9ff",
+                        "secondary-fixed-dim": "#88d982",
+                        "tertiary-fixed": "#69ff87",
+                        "on-primary-fixed": "#001453",
+                        "on-tertiary": "#ffffff",
+                        "on-surface-variant": "#444654",
+                        "tertiary": "#004317",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "on-tertiary-fixed": "#002108",
+                        "primary": "#002c98",
+                        "on-primary-container": "#b2bfff",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "primary-fixed": "#dde1ff",
+                        "surface-container-highest": "#dde3ee",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "outline-variant": "#c4c5d6",
+                        "secondary": "#1b6d24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-variant": "#dde3ee",
+                        "inverse-on-surface": "#ecf1fc",
+                        "inverse-primary": "#b7c4ff"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+            vertical-align: middle;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        .font-manrope { font-family: 'Manrope', sans-serif; }
+        .font-inter { font-family: 'Inter', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed min-h-screen pb-24">
+<!-- TopAppBar -->
+<header class="bg-[#f8f9ff]/80 dark:bg-[#161c24]/80 backdrop-blur-xl sticky top-0 z-50 flex items-center justify-between px-6 py-4 w-full shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)]">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center overflow-hidden">
+<img alt="Scholar Bot" class="w-full h-full object-cover" data-alt="Friendly professional digital tutor avatar with a clean scholarly aesthetic and soft studio lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBDGC7JXl5cPUXUNjEVDRpYQ3XmfiDV6xn9Pr7Ra5U0TVrm-RoEUrawyY-dSNiyoksrQizIvsWcvZiHhauQ01SQv90W_ZwHT36zZj_f1ezIvdkcZi8V2X475ZFob5Xp3uGd7-sbiJn1qmBjXaX19AXtW3XKnDlmpnHQidDrOiTkD0IB-kCbDjy5pmbENQx3sqXI1eIbc8CUlkVzWb5AfRhzz6fgTXmLDfiuVN1HbZkqJMEjudvaCu-tKnVR1pv0BFgZEPKdkrO-dfI"/>
+</div>
+<div class="flex flex-col">
+<h1 class="font-manrope font-extrabold text-[#002c98] dark:text-white text-lg tracking-tight">The Academic Architect</h1>
+<span class="font-inter text-[10px] uppercase tracking-widest text-secondary font-semibold">Speaking Module</span>
+</div>
+</div>
+<button class="p-2 rounded-full hover:bg-[#dde3ee]/50 transition-colors">
+<span class="material-symbols-outlined text-[#002c98] dark:text-[#eef4ff]">more_vert</span>
+</button>
+</header>
+<main class="px-6 py-6 max-w-md mx-auto space-y-8">
+<!-- Header Section: Topic & Motivation -->
+<section class="space-y-2">
+<div class="flex items-center gap-2 text-secondary">
+<span class="material-symbols-outlined text-sm" style="font-variation-settings: 'FILL' 1;">stars</span>
+<span class="font-inter text-xs font-semibold uppercase tracking-wider">IELTS Part 2: Long Turn</span>
+</div>
+<h2 class="font-headline font-bold text-2xl text-on-surface leading-tight">Describe a place you visited that has a special meaning to you.</h2>
+</section>
+<!-- Bot Speaking Section (The Academic Voice) -->
+<div class="relative group">
+<div class="absolute -inset-1 bg-gradient-to-tr from-primary to-primary-container opacity-5 rounded-[2rem] blur"></div>
+<div class="relative bg-surface-container-lowest p-6 rounded-[2rem] shadow-sm space-y-4">
+<div class="flex items-start gap-4">
+<div class="w-12 h-12 rounded-2xl bg-surface-container-low flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary text-3xl">record_voice_over</span>
+</div>
+<div class="space-y-1">
+<p class="font-label text-[10px] text-outline font-bold uppercase tracking-widest">Scholar Bot (British Accent)</p>
+<p class="font-body text-on-surface leading-relaxed italic">"Listen carefully to the prompt instructions. You have one minute to prepare and two minutes to speak."</p>
+</div>
+</div>
+<!-- Audio Player Interaction -->
+<div class="bg-surface-container-low rounded-xl p-4 flex items-center gap-4">
+<button class="w-10 h-10 rounded-full bg-primary flex items-center justify-center text-on-primary shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1 space-y-2">
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full w-1/3 bg-primary rounded-full"></div>
+</div>
+<div class="flex justify-between font-label text-[10px] text-outline">
+<span>0:14</span>
+<span>0:45</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Targets & Vocabulary: Bento-inspired layout -->
+<section class="space-y-4">
+<h3 class="font-headline font-bold text-sm uppercase tracking-widest text-on-surface-variant flex items-center gap-2">
+<span class="material-symbols-outlined text-sm">inventory_2</span> Recommended Lexicon
+            </h3>
+<div class="grid grid-cols-2 gap-3">
+<div class="bg-surface-container-low p-4 rounded-2xl border-t-4 border-secondary/20">
+<p class="font-headline font-bold text-on-secondary-container text-xs">Picturesque</p>
+<p class="font-label text-[10px] text-on-surface-variant">Vividly attractive scenery</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl border-t-4 border-secondary/20">
+<p class="font-headline font-bold text-on-secondary-container text-xs">Sentimental</p>
+<p class="font-label text-[10px] text-on-surface-variant">Nostalgic feelings</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl border-t-4 border-secondary/20">
+<p class="font-headline font-bold text-on-secondary-container text-xs">Breathtaking</p>
+<p class="font-label text-[10px] text-on-surface-variant">Awe-inspiring views</p>
+</div>
+<div class="bg-surface-container-low p-4 rounded-2xl border-t-4 border-secondary/20">
+<p class="font-headline font-bold text-on-secondary-container text-xs">Tranquil</p>
+<p class="font-label text-[10px] text-on-surface-variant">Peaceful atmosphere</p>
+</div>
+</div>
+</section>
+<!-- Recording Interface -->
+<section class="flex flex-col items-center justify-center py-8 space-y-8">
+<!-- Timer Visualization -->
+<div class="relative w-48 h-48 flex items-center justify-center">
+<svg class="w-full h-full transform -rotate-90">
+<circle class="text-surface-container-highest" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-width="6"></circle>
+<circle class="text-primary" cx="96" cy="96" fill="transparent" r="88" stroke="currentColor" stroke-dasharray="552.9" stroke-dashoffset="138" stroke-width="6"></circle>
+</svg>
+<div class="absolute flex flex-col items-center">
+<span class="font-headline font-extrabold text-4xl text-on-surface tracking-tighter">01:45</span>
+<span class="font-label text-[10px] uppercase tracking-widest text-outline">Target: 2:00</span>
+</div>
+</div>
+<!-- Interaction Buttons -->
+<div class="flex flex-col items-center gap-6 w-full">
+<!-- Recording Button -->
+<div class="relative">
+<div class="absolute inset-0 bg-primary/20 rounded-full animate-ping"></div>
+<button class="relative w-24 h-24 bg-gradient-to-tr from-primary to-primary-container rounded-full shadow-[0_8px_24px_rgba(0,44,152,0.3)] flex items-center justify-center text-white group active:scale-90 transition-transform">
+<span class="material-symbols-outlined text-4xl" style="font-variation-settings: 'FILL' 1;">mic</span>
+</button>
+</div>
+<p class="font-body text-sm font-medium text-on-surface-variant">Tap to pause recording</p>
+<!-- Processing / Bubble State Placeholder -->
+<div class="w-full bg-surface-container-low/50 border border-outline-variant/15 rounded-3xl p-4 flex items-center gap-4 opacity-70">
+<div class="w-8 h-8 rounded-full bg-primary-fixed-dim flex items-center justify-center">
+<span class="material-symbols-outlined text-sm text-on-primary-fixed">graphic_eq</span>
+</div>
+<div class="flex-1 space-y-1">
+<div class="h-1.5 bg-surface-container-highest rounded-full w-full overflow-hidden">
+<div class="h-full bg-primary w-2/3 animate-pulse"></div>
+</div>
+<p class="font-label text-[10px] text-outline">Wait for the bot to transcribe and analyze...</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-4 bg-surface z-50 rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider mt-1">Lessons</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note">edit_note</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider mt-1">Homework</span>
+</a>
+<!-- Active Tab: Progress / Practice Context -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#002c98] to-[#1a43bf] text-white rounded-full p-3 mb-2 transform -translate-y-2 shadow-lg scale-105" href="#">
+<span class="material-symbols-outlined" data-icon="auto_graph" style="font-variation-settings: 'FILL' 1;">auto_graph</span>
+<span class="font-inter font-medium text-[8px] uppercase tracking-wider mt-0.5">Speaking</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 dark:text-white/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider mt-1">Settings</span>
+</a>
+</nav>
+<!-- Floating Action Button: Suppressed on focused task screens as per protocol -->
+</body></html>

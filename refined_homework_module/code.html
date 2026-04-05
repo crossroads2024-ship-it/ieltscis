@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Homework Module | IELTS Marathon</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:ital,wght@0,300;0,400;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "surface-container-lowest": "#ffffff",
+                      "surface-container-high": "#e3e8f4",
+                      "primary-container": "#1a43bf",
+                      "outline": "#747685",
+                      "on-surface-variant": "#444654",
+                      "on-tertiary-fixed": "#002108",
+                      "background": "#f8f9ff",
+                      "secondary-container": "#a0f399",
+                      "on-secondary-fixed": "#002204",
+                      "on-secondary-fixed-variant": "#005312",
+                      "surface-container-low": "#eef4ff",
+                      "on-error-container": "#93000a",
+                      "on-error": "#ffffff",
+                      "secondary": "#1b6d24",
+                      "primary-fixed-dim": "#b7c4ff",
+                      "on-secondary-container": "#217128",
+                      "inverse-primary": "#b7c4ff",
+                      "tertiary-fixed": "#69ff87",
+                      "outline-variant": "#c4c5d6",
+                      "on-tertiary": "#ffffff",
+                      "inverse-on-surface": "#ecf1fc",
+                      "on-surface": "#161c24",
+                      "tertiary": "#004317",
+                      "surface-tint": "#2f53ce",
+                      "primary": "#002c98",
+                      "on-primary-container": "#b2bfff",
+                      "on-tertiary-fixed-variant": "#00531e",
+                      "surface-dim": "#d5dae5",
+                      "on-tertiary-container": "#35de66",
+                      "surface-bright": "#f8f9ff",
+                      "on-primary-fixed-variant": "#0438b6",
+                      "surface": "#f8f9ff",
+                      "on-background": "#161c24",
+                      "tertiary-fixed-dim": "#3ce36a",
+                      "tertiary-container": "#005d22",
+                      "surface-container-highest": "#dde3ee",
+                      "surface-container": "#e9eef9",
+                      "secondary-fixed-dim": "#88d982",
+                      "surface-variant": "#dde3ee",
+                      "secondary-fixed": "#a3f69c",
+                      "primary-fixed": "#dde1ff",
+                      "on-secondary": "#ffffff",
+                      "on-primary-fixed": "#001453",
+                      "error": "#ba1a1a",
+                      "inverse-surface": "#2b3139",
+                      "on-primary": "#ffffff",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "fontFamily": {
+                      "headline": ["Manrope"],
+                      "body": ["Public Sans"],
+                      "label": ["Inter"]
+              }
+            },
+          }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        body {
+            font-family: 'Public Sans', sans-serif;
+            background-color: #f8f9ff;
+            color: #161c24;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="min-h-screen flex flex-col items-center">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky z-40 bg-[#f8f9ff] scholar-shadow">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="active:scale-95 duration-200 hover:opacity-80 transition-opacity text-[#002c98]">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight text-[#002c98]">IELTS Marathon</h1>
+</div>
+<div class="h-10 w-10 rounded-full overflow-hidden border-2 border-primary-fixed scholar-shadow">
+<img alt="Scholar Profile" class="w-full h-full object-cover" data-alt="Close-up portrait of a scholarly young professional woman with glasses, smiling softly, bright natural library lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCyaK5Y6qozPGImkPJ09AO3w2-zYe1-wZFqp0CQU8u_az9GKv9bEW0-6bhYZaRJhgLHn3ZKAZN_l_3Xetbleb51deIdICB-4jfJqmJ0Xs8sEJzAonlq22Iv0hruoHStPi49D_bhrfMQAcihJvM3XZNK0ighiXF5mCsJSLYQtfrbBzkZn6shiVdTUffVkQ-SKu5ZvfqAbze8Rj94k1fjyZ6xF0y1DkC2iq6DJgq87OGUQqEaXKIGD0HL0QjB63yU4Xo-lRMW2z4bpaE"/>
+</div>
+</div>
+</header>
+<main class="w-full max-w-4xl px-4 md:px-8 py-8 mb-24">
+<!-- Homework Header Section -->
+<section class="mb-10">
+<div class="flex flex-col gap-2">
+<div class="flex items-center gap-2">
+<span class="font-label text-xs font-semibold uppercase tracking-widest text-secondary">Academic Writing Task 1</span>
+<span class="h-1 w-1 bg-outline-variant rounded-full"></span>
+<span class="font-label text-xs font-medium text-on-surface-variant">Estimated: 20 mins</span>
+</div>
+<h2 class="font-headline text-3xl font-extrabold text-on-surface tracking-tight">Data Analysis &amp; Trends</h2>
+<p class="font-body text-on-surface-variant max-w-2xl leading-relaxed">Master the vocabulary of change and comparison. This module focuses on interpreting complex line graphs and bar charts with scholarly precision.</p>
+</div>
+<!-- Global Progress Bar -->
+<div class="mt-8 bg-surface-container-high h-2 w-full rounded-full overflow-hidden">
+<div class="bg-gradient-to-r from-primary to-primary-container h-full w-[40%] rounded-full transition-all duration-700"></div>
+</div>
+<div class="mt-2 flex justify-between items-center">
+<span class="font-label text-xs font-medium text-primary">Question 4 of 10</span>
+<span class="font-label text-xs font-medium text-on-surface-variant italic">Progressing smoothly, Alex!</span>
+</div>
+</section>
+<!-- Question Card -->
+<div class="relative bg-surface-container-lowest scholar-shadow rounded-xl overflow-hidden mb-8">
+<!-- Accent Progress Bar for Card -->
+<div class="absolute top-0 left-0 h-1 w-full bg-secondary"></div>
+<div class="p-8">
+<!-- Question Metadata -->
+<div class="flex items-center gap-3 mb-6">
+<div class="h-10 w-10 flex items-center justify-center rounded-xl bg-surface-container-low text-primary font-bold font-headline">
+                        04
+                    </div>
+<h3 class="font-headline font-bold text-lg text-on-surface">Interpretation of Upward Fluctuations</h3>
+</div>
+<!-- Graphic/Visual Element -->
+<div class="aspect-[16/7] bg-surface-container rounded-xl flex items-center justify-center mb-8 overflow-hidden relative group">
+<img alt="Statistical Line Graph" class="w-full h-full object-cover opacity-90 group-hover:scale-105 transition-transform duration-700" data-alt="A clean, professional business line graph showing upward and downward trends on a white desk with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCdZdJmTmVD4exiyQvYOd9Nnl18mdAHviR1M0YIWZftlhoyGkL3-W_VzXEt9agUQ1e_ng-_G6NuLo8xKNRy6r44nPyyUf0c5ne2YNldYoV_RMtlhGYU9WK6n4grUsYlnieZntPbGS_44P6r9OjXZyRP0zpNR5q3OEVy447UBpAAmN9wQdpT0ZEZ_huNwfsPrpWlMt4DCMKwxS2_U39fHsJi5QnqAaTxEOoqjn7iCB_ApR_qkat6keozxrdyvCEYqGoxPXdUYcW5-lc"/>
+<div class="absolute inset-0 bg-primary/5"></div>
+</div>
+<!-- The Question Stem -->
+<div class="mb-10">
+<p class="font-body text-lg leading-relaxed text-on-surface">
+                        Which of the following phrases most accurately describes the period between 2018 and 2020 where the exports experienced multiple small peaks and troughs?
+                    </p>
+</div>
+<!-- Multiple Choice Options -->
+<div class="grid grid-cols-1 gap-4">
+<!-- Selected State -->
+<button class="group flex items-start gap-4 p-5 rounded-xl text-left border-2 border-primary bg-surface-container-low transition-all duration-200">
+<div class="mt-0.5 h-6 w-6 shrink-0 flex items-center justify-center rounded-full border-2 border-primary bg-primary text-on-primary">
+<span class="material-symbols-outlined text-[16px]" style="font-variation-settings: 'FILL' 1;">check</span>
+</div>
+<div>
+<span class="block font-headline font-bold text-primary mb-1">A. Fluctuated significantly</span>
+<span class="font-body text-on-surface-variant text-sm">Implies a continuous movement both up and down within a specific range.</span>
+</div>
+</button>
+<!-- Default State -->
+<button class="group flex items-start gap-4 p-5 rounded-xl text-left border border-transparent bg-surface-container-lowest scholar-shadow hover:bg-surface-container-low transition-all duration-200">
+<div class="mt-0.5 h-6 w-6 shrink-0 flex items-center justify-center rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors"></div>
+<div>
+<span class="block font-headline font-bold text-on-surface mb-1">B. Plummeted drastically</span>
+<span class="font-body text-on-surface-variant text-sm">Indicates a sudden and sharp drop in value, which contradicts the visual data.</span>
+</div>
+</button>
+<!-- Default State -->
+<button class="group flex items-start gap-4 p-5 rounded-xl text-left border border-transparent bg-surface-container-lowest scholar-shadow hover:bg-surface-container-low transition-all duration-200">
+<div class="mt-0.5 h-6 w-6 shrink-0 flex items-center justify-center rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors"></div>
+<div>
+<span class="block font-headline font-bold text-on-surface mb-1">C. Remained static</span>
+<span class="font-body text-on-surface-variant text-sm">Suggests no change whatsoever, failing to capture the observed movement.</span>
+</div>
+</button>
+<!-- Default State -->
+<button class="group flex items-start gap-4 p-5 rounded-xl text-left border border-transparent bg-surface-container-lowest scholar-shadow hover:bg-surface-container-low transition-all duration-200">
+<div class="mt-0.5 h-6 w-6 shrink-0 flex items-center justify-center rounded-full border-2 border-outline-variant group-hover:border-primary transition-colors"></div>
+<div>
+<span class="block font-headline font-bold text-on-surface mb-1">D. Soared exponentially</span>
+<span class="font-body text-on-surface-variant text-sm">Used for rapid, massive growth, which overstates the minor variations shown.</span>
+</div>
+</button>
+</div>
+</div>
+</div>
+<!-- Action Area -->
+<div class="flex flex-col md:flex-row items-center justify-between gap-6 py-6">
+<button class="text-primary font-label font-semibold text-sm uppercase tracking-wider flex items-center gap-2 hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">arrow_back</span>
+                Previous Question
+            </button>
+<button class="w-full md:w-auto px-10 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary rounded-full font-headline font-bold scholar-shadow active:scale-95 transition-all">
+                Submit Homework
+            </button>
+</div>
+<!-- Feedback Hint -->
+<div class="mt-12 p-6 bg-secondary/5 rounded-2xl flex items-center gap-5">
+<div class="h-12 w-12 shrink-0 bg-secondary-container rounded-full flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+</div>
+<div>
+<h4 class="font-headline font-bold text-secondary">Scholar's Tip</h4>
+<p class="font-body text-sm text-on-surface-variant italic">"Using academic verbs like 'fluctuate' or 'oscillate' instead of 'go up and down' can boost your Lexical Resource score by 0.5 points."</p>
+</div>
+</div>
+</main>
+<!-- Success Toast (Implicitly Visible/Implied State) -->
+<div class="fixed top-24 right-8 z-50 bg-on-surface text-surface-container-lowest px-6 py-4 rounded-xl scholar-shadow flex items-center gap-3 border-l-4 border-secondary translate-x-0 transition-transform">
+<span class="material-symbols-outlined text-secondary" style="font-variation-settings: 'FILL' 1;">check_circle</span>
+<div class="flex flex-col">
+<span class="font-headline font-bold text-sm">Answer Saved</span>
+<span class="font-label text-xs opacity-70">Auto-syncing with your progress...</span>
+</div>
+</div>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-[#0a0b10]/80 backdrop-blur-xl scholar-shadow rounded-t-[1.5rem]">
+<!-- Lessons -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="menu_book">menu_book</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Lessons</span>
+</a>
+<!-- Homework (Active) -->
+<a class="flex flex-col items-center justify-center text-[#002c98] dark:text-[#4d7cff] bg-[#eef4ff] dark:bg-[#1a2333] rounded-xl px-4 py-1 transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="assignment" style="font-variation-settings: 'FILL' 1;">assignment</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Homework</span>
+</a>
+<!-- Progress -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Progress</span>
+</a>
+<!-- Profile -->
+<a class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90" href="#">
+<span class="material-symbols-outlined" data-icon="person">person</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</a>
+</nav>
+</body></html>

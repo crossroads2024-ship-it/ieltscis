@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>IELTS Marathon - Scholar Rewards</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;700;800&amp;family=Public+Sans:wght@300;400;600&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-high": "#e3e8f4",
+                        "primary-container": "#1a43bf",
+                        "outline": "#747685",
+                        "on-surface-variant": "#444654",
+                        "on-tertiary-fixed": "#002108",
+                        "background": "#f8f9ff",
+                        "secondary-container": "#a0f399",
+                        "on-secondary-fixed": "#002204",
+                        "on-secondary-fixed-variant": "#005312",
+                        "surface-container-low": "#eef4ff",
+                        "on-error-container": "#93000a",
+                        "on-error": "#ffffff",
+                        "secondary": "#1b6d24",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "on-secondary-container": "#217128",
+                        "inverse-primary": "#b7c4ff",
+                        "tertiary-fixed": "#69ff87",
+                        "outline-variant": "#c4c5d6",
+                        "on-tertiary": "#ffffff",
+                        "inverse-on-surface": "#ecf1fc",
+                        "on-surface": "#161c24",
+                        "tertiary": "#004317",
+                        "surface-tint": "#2f53ce",
+                        "primary": "#002c98",
+                        "on-primary-container": "#b2bfff",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "surface-dim": "#d5dae5",
+                        "on-tertiary-container": "#35de66",
+                        "surface-bright": "#f8f9ff",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "surface": "#f8f9ff",
+                        "on-background": "#161c24",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "tertiary-container": "#005d22",
+                        "surface-container-highest": "#dde3ee",
+                        "surface-container": "#e9eef9",
+                        "secondary-fixed-dim": "#88d982",
+                        "surface-variant": "#dde3ee",
+                        "secondary-fixed": "#a3f69c",
+                        "primary-fixed": "#dde1ff",
+                        "on-secondary": "#ffffff",
+                        "on-primary-fixed": "#001453",
+                        "error": "#ba1a1a",
+                        "inverse-surface": "#2b3139",
+                        "on-primary": "#ffffff",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen pb-32">
+<!-- TopAppBar -->
+<header class="w-full top-0 sticky bg-[#eef4ff] dark:bg-[#151a26] shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] z-50">
+<div class="flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-4">
+<button class="hover:opacity-80 transition-opacity active:scale-95 duration-200">
+<span class="material-symbols-outlined text-[#002c98] dark:text-[#4d7cff]">menu</span>
+</button>
+<h1 class="font-manrope font-bold text-lg tracking-tight text-[#002c98] dark:text-[#4d7cff]">IELTS Marathon</h1>
+</div>
+<div class="w-10 h-10 rounded-full overflow-hidden border-2 border-primary-container">
+<img class="w-full h-full object-cover" data-alt="close up portrait of a serious young man with spectacles looking directly at camera against a neutral studio background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCoBmeP70Y5js_wvXecrp8TZz1eH9KwCh-D3gcBEe1JFMRr8tNfZDgGNqOxsTmqrLx689dYzCHRnI0AogUi_N-FsuDv1cJjdInzyCIjR1V3rf0X-T9ZjYcBcbb9Ai5KvrffsW-EAqH1aDjt2iXS9p3Xqifnjj7pacQNMEQqtiO7HPA8SPjZqDEER6EOKKgJJwGILKsUwoye-GEIL7gpltNizD4Zg-jFZFgqoCZU1qYwJMw0OUqtTAHAjZWloAfyGlwBS6-dLeLT-Ew"/>
+</div>
+</div>
+</header>
+<main class="max-w-screen-md mx-auto px-6 py-8">
+<!-- Hero Streak Section -->
+<section class="relative overflow-hidden rounded-[2rem] bg-gradient-to-br from-primary to-primary-container p-8 mb-8 text-on-primary">
+<div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+<div class="absolute -bottom-8 -left-8 w-32 h-32 bg-secondary/20 rounded-full blur-2xl"></div>
+<div class="relative z-10 flex flex-col items-center text-center">
+<div class="w-32 h-32 mb-6 bg-surface-container-lowest/10 backdrop-blur-md rounded-full flex items-center justify-center border border-white/20 shadow-2xl">
+<span class="material-symbols-outlined text-6xl text-tertiary-fixed" style="font-variation-settings: 'FILL' 1;">workspace_premium</span>
+</div>
+<h2 class="font-headline font-extrabold text-4xl mb-3 tracking-tight">7-Day Streak!</h2>
+<p class="font-body text-lg text-primary-fixed leading-relaxed max-w-md">
+                    Incredible work, Scholar! You've maintained your momentum for a full week.
+                </p>
+<!-- Milestone Progress -->
+<div class="w-full mt-10">
+<div class="flex justify-between items-end mb-3">
+<span class="font-label text-sm font-medium uppercase tracking-widest text-primary-fixed">Next Milestone: 10 Days</span>
+<span class="font-headline text-xl font-bold">70%</span>
+</div>
+<div class="w-full h-3 bg-white/20 rounded-full overflow-hidden">
+<div class="h-full bg-secondary shadow-[0_0_15px_rgba(27,109,36,0.5)] rounded-full w-[70%]"></div>
+</div>
+<div class="mt-4 flex justify-center gap-1">
+<!-- Streak Dots -->
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-secondary"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+<div class="w-2 h-2 rounded-full bg-white/20"></div>
+</div>
+</div>
+</div>
+</section>
+<!-- Stats Bento Grid -->
+<div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+<div class="col-span-2 bg-surface-container-low rounded-3xl p-6 flex items-center justify-between">
+<div>
+<p class="font-label text-xs font-semibold text-outline uppercase tracking-wider mb-1">Points Balance</p>
+<h3 class="font-headline text-3xl font-extrabold text-primary">12,450 <span class="text-lg font-medium text-on-surface-variant">PTS</span></h3>
+</div>
+<div class="w-12 h-12 rounded-2xl bg-primary/10 flex items-center justify-center">
+<span class="material-symbols-outlined text-primary" style="font-variation-settings: 'FILL' 1;">token</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-6 flex flex-col justify-between">
+<span class="material-symbols-outlined text-secondary text-3xl">bolt</span>
+<div>
+<p class="font-label text-[10px] font-bold text-outline uppercase tracking-tighter">Current Rank</p>
+<p class="font-headline text-lg font-bold">Elite II</p>
+</div>
+</div>
+</div>
+<!-- Recent Activities / Points Feed -->
+<section class="space-y-4">
+<div class="flex items-center justify-between mb-2">
+<h4 class="font-headline text-xl font-bold tracking-tight">Recent Rewards</h4>
+<button class="text-primary font-label text-sm font-semibold hover:underline">View All</button>
+</div>
+<!-- Activity Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex items-center gap-4 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-xl bg-secondary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-secondary">edit_note</span>
+</div>
+<div class="flex-grow">
+<h5 class="font-body font-semibold text-sm">Writing Task 2: Advanced Vocabulary</h5>
+<p class="font-label text-xs text-outline">Completed 2 hours ago</p>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-secondary text-sm">+50 Points</span>
+</div>
+</div>
+<!-- Activity Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex items-center gap-4 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-xl bg-primary/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-primary">calendar_today</span>
+</div>
+<div class="flex-grow">
+<h5 class="font-body font-semibold text-sm">Daily Login Bonus</h5>
+<p class="font-label text-xs text-outline">Day 7/7 Multiplier</p>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-secondary text-sm">+150 Points</span>
+</div>
+</div>
+<!-- Activity Card -->
+<div class="bg-surface-container-lowest rounded-2xl p-4 flex items-center gap-4 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] border border-outline-variant/10">
+<div class="w-12 h-12 rounded-xl bg-on-tertiary-container/10 flex items-center justify-center flex-shrink-0">
+<span class="material-symbols-outlined text-on-tertiary-container">hearing</span>
+</div>
+<div class="flex-grow">
+<h5 class="font-body font-semibold text-sm">Listening Practice: Perfect Score</h5>
+<p class="font-label text-xs text-outline">Completed Yesterday</p>
+</div>
+<div class="text-right">
+<span class="font-headline font-bold text-secondary text-sm">+80 Points</span>
+</div>
+</div>
+</section>
+<!-- Motivational Quote Section (Clean editorial feel) -->
+<section class="mt-12 py-8 border-t border-surface-container-highest flex flex-col items-center text-center">
+<span class="material-symbols-outlined text-outline-variant text-4xl mb-4">format_quote</span>
+<blockquote class="font-headline text-lg italic text-on-surface-variant leading-snug px-8">
+                "Continuous effort — not strength or intelligence — is the key to unlocking our potential."
+            </blockquote>
+<p class="mt-4 font-label text-xs text-outline uppercase tracking-widest">— Winston Churchill</p>
+</section>
+</main>
+<!-- BottomNavBar -->
+<nav class="fixed bottom-0 left-0 w-full z-50 flex justify-around items-center px-4 py-3 pb-safe bg-white/80 dark:bg-[#0a0b10]/80 backdrop-blur-xl rounded-t-[1.5rem] shadow-xl">
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90">
+<span class="material-symbols-outlined">menu_book</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Lessons</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90">
+<span class="material-symbols-outlined">assignment</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Homework</span>
+</div>
+<div class="flex flex-col items-center justify-center text-[#002c98] dark:text-[#4d7cff] bg-[#eef4ff] dark:bg-[#1a2333] rounded-xl px-4 py-1 transition-transform active:scale-90">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">trending_up</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Progress</span>
+</div>
+<div class="flex flex-col items-center justify-center text-slate-400 dark:text-slate-500 px-4 py-1 hover:text-[#002c98] transition-transform active:scale-90">
+<span class="material-symbols-outlined">person</span>
+<span class="font-inter text-[11px] font-medium uppercase tracking-wider">Profile</span>
+</div>
+</nav>
+</body></html>

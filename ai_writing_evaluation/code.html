@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The Academic Architect - AI Writing Evaluation</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:ital,wght@0,400;0,600;1,400&amp;family=Inter:wght@400;500;600&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-bright": "#f8f9ff",
+                    "on-secondary-container": "#217128",
+                    "on-surface": "#161c24",
+                    "surface": "#f8f9ff",
+                    "on-secondary-fixed": "#002204",
+                    "primary-fixed-dim": "#b7c4ff",
+                    "surface-container": "#e9eef9",
+                    "primary-container": "#1a43bf",
+                    "surface-tint": "#2f53ce",
+                    "tertiary-container": "#005d22",
+                    "on-secondary": "#ffffff",
+                    "surface-dim": "#d5dae5",
+                    "secondary-fixed": "#a3f69c",
+                    "on-primary": "#ffffff",
+                    "error-container": "#ffdad6",
+                    "on-error-container": "#93000a",
+                    "error": "#ba1a1a",
+                    "inverse-surface": "#2b3139",
+                    "surface-container-low": "#eef4ff",
+                    "surface-container-high": "#e3e8f4",
+                    "on-background": "#161c24",
+                    "on-secondary-fixed-variant": "#005312",
+                    "secondary-container": "#a0f399",
+                    "on-error": "#ffffff",
+                    "on-tertiary-container": "#35de66",
+                    "outline": "#747685",
+                    "background": "#f8f9ff",
+                    "secondary-fixed-dim": "#88d982",
+                    "tertiary-fixed": "#69ff87",
+                    "on-primary-fixed": "#001453",
+                    "on-tertiary": "#ffffff",
+                    "on-surface-variant": "#444654",
+                    "tertiary": "#004317",
+                    "tertiary-fixed-dim": "#3ce36a",
+                    "on-tertiary-fixed": "#002108",
+                    "primary": "#002c98",
+                    "on-primary-container": "#b2bfff",
+                    "on-primary-fixed-variant": "#0438b6",
+                    "primary-fixed": "#dde1ff",
+                    "surface-container-highest": "#dde3ee",
+                    "on-tertiary-fixed-variant": "#00531e",
+                    "outline-variant": "#c4c5d6",
+                    "secondary": "#1b6d24",
+                    "surface-container-lowest": "#ffffff",
+                    "surface-variant": "#dde3ee",
+                    "inverse-on-surface": "#ecf1fc",
+                    "inverse-primary": "#b7c4ff"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.25rem",
+                    "lg": "0.5rem",
+                    "xl": "0.75rem",
+                    "full": "9999px"
+            },
+            "fontFamily": {
+                    "headline": ["Manrope"],
+                    "body": ["Public Sans"],
+                    "label": ["Inter"]
+            }
+          },
+        }
+      }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .scholar-shadow {
+            box-shadow: 0 8px 24px -4px rgba(22, 28, 36, 0.06);
+        }
+        body {
+            background-color: #f8f9ff;
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body text-on-surface mb-24">
+<!-- TopAppBar Execution -->
+<header class="bg-[#f8f9ff]/80 backdrop-blur-xl docked full-width top-0 sticky z-50 shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] flex items-center justify-between px-6 py-4 w-full">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-primary-container flex items-center justify-center text-white font-headline font-bold">
+                SB
+            </div>
+<h1 class="font-manrope font-extrabold text-[#002c98]">The Academic Architect</h1>
+</div>
+<button class="text-[#002c98] hover:bg-[#dde3ee]/50 p-2 rounded-full transition-colors">
+<span class="material-symbols-outlined" data-icon="more_vert">more_vert</span>
+</button>
+</header>
+<main class="px-6 py-8 max-w-lg mx-auto">
+<!-- Hero Section: Score Badge -->
+<section class="flex flex-col items-center mb-10">
+<div class="relative flex items-center justify-center w-48 h-48">
+<!-- Asymmetric background decoration -->
+<div class="absolute inset-0 bg-gradient-to-tr from-primary to-primary-container opacity-5 rounded-[2rem] rotate-12"></div>
+<div class="absolute inset-0 bg-secondary opacity-5 rounded-full -rotate-6"></div>
+<!-- Main Badge -->
+<div class="relative bg-surface-container-lowest scholar-shadow w-40 h-40 rounded-full flex flex-col items-center justify-center border-4 border-surface-container">
+<span class="font-headline font-extrabold text-primary text-[4rem] leading-none">7.5</span>
+<span class="font-label font-semibold text-primary/60 text-xs tracking-widest uppercase">Band Score</span>
+</div>
+</div>
+<p class="mt-6 font-headline font-bold text-xl text-center text-on-surface">Very Good User</p>
+<p class="text-on-surface-variant text-center px-4 mt-2">Your essay demonstrates high fluency and accurate usage of complex structures.</p>
+</section>
+<!-- Score Breakdown: Bento Style Grid -->
+<section class="grid grid-cols-2 gap-4 mb-10">
+<!-- Task Response -->
+<div class="bg-surface-container-low p-5 rounded-xl scholar-shadow flex flex-col justify-between border-t-4 border-secondary">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-4">Task Response</span>
+<span class="font-headline font-extrabold text-2xl text-on-surface">8.0</span>
+</div>
+<!-- Coherence & Cohesion -->
+<div class="bg-surface-container-low p-5 rounded-xl scholar-shadow flex flex-col justify-between border-t-4 border-primary">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-4">Coherence</span>
+<span class="font-headline font-extrabold text-2xl text-on-surface">7.0</span>
+</div>
+<!-- Lexical Resource -->
+<div class="bg-surface-container-low p-5 rounded-xl scholar-shadow flex flex-col justify-between border-t-4 border-primary-container">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-4">Vocabulary</span>
+<span class="font-headline font-extrabold text-2xl text-on-surface">7.5</span>
+</div>
+<!-- Grammatical Range -->
+<div class="bg-surface-container-low p-5 rounded-xl scholar-shadow flex flex-col justify-between border-t-4 border-secondary-container">
+<span class="font-label text-[10px] text-on-surface-variant uppercase tracking-widest mb-4">Grammar</span>
+<span class="font-headline font-extrabold text-2xl text-on-surface">7.5</span>
+</div>
+</section>
+<!-- Detailed Feedback: Editorial Layout -->
+<section class="mb-10">
+<div class="flex items-center justify-between mb-6">
+<h2 class="font-headline font-bold text-lg text-primary">Detailed Feedback</h2>
+<span class="material-symbols-outlined text-primary/40" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<div class="space-y-6">
+<!-- Highlighted Snippet 1 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl scholar-shadow border-l-4 border-error">
+<p class="font-body italic text-on-surface leading-relaxed mb-4">
+                        "...the majority of students <span class="bg-error-container/40 text-on-error-container px-1 rounded">don't likes</span> the new curriculum because..."
+                    </p>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-error text-sm" data-icon="cancel">cancel</span>
+<span class="font-label font-semibold text-xs text-on-error-container">Subject-Verb Agreement</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3">Plural subjects require plural verb forms. Use "do not like" or "dislike".</p>
+<div class="bg-secondary/10 p-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="check_circle">check_circle</span>
+<span class="font-body font-semibold text-sm text-secondary">do not like</span>
+</div>
+</div>
+</div>
+<!-- Highlighted Snippet 2 -->
+<div class="bg-surface-container-lowest p-6 rounded-xl scholar-shadow border-l-4 border-primary">
+<p class="font-body italic text-on-surface leading-relaxed mb-4">
+                        "...globalization has <span class="bg-primary/10 text-primary px-1 rounded">many good things</span> for modern society."
+                    </p>
+<div class="bg-surface-container-low p-4 rounded-lg">
+<div class="flex items-center gap-2 mb-2">
+<span class="material-symbols-outlined text-primary text-sm" data-icon="lightbulb">lightbulb</span>
+<span class="font-label font-semibold text-xs text-primary">Lexical Resource Upgrade</span>
+</div>
+<p class="text-sm text-on-surface-variant mb-3">To reach Band 8.0, replace generic phrases with academic vocabulary.</p>
+<div class="bg-secondary/10 p-2 rounded flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-sm" data-icon="trending_up">trending_up</span>
+<span class="font-body font-semibold text-sm text-secondary">numerous benefits / multifaceted advantages</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Next Steps: Recommendation -->
+<section class="bg-gradient-to-tr from-primary to-primary-container p-8 rounded-3xl text-white scholar-shadow relative overflow-hidden">
+<!-- Decorative texture -->
+<div class="absolute -right-10 -bottom-10 w-40 h-40 bg-white/10 rounded-full blur-3xl"></div>
+<div class="relative z-10">
+<div class="flex items-center gap-3 mb-4">
+<span class="material-symbols-outlined" data-icon="rocket_launch">rocket_launch</span>
+<h3 class="font-headline font-bold text-lg">Next Steps</h3>
+</div>
+<p class="font-body text-primary-fixed/80 leading-relaxed mb-6">
+                    Your grammar is solid, but your vocabulary is slightly repetitive. Focus on academic synonyms for common verbs to hit that Band 8.0 target.
+                </p>
+<button class="w-full bg-surface-container-lowest text-primary font-label font-bold py-4 rounded-full shadow-lg hover:scale-95 transition-transform">
+                    Practice Synonyms Task
+                </button>
+</div>
+</section>
+</main>
+<!-- BottomNavBar Execution -->
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-4 bg-[#f8f9ff] z-50 rounded-t-[1.5rem] shadow-[0_-4px_20px_rgba(0,0,0,0.04)]">
+<!-- Lessons -->
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="menu_book">menu_book</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Lessons</span>
+</a>
+<!-- Homework (Active State Mapping - Closest to Evaluation) -->
+<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#002c98] to-[#1a43bf] text-white rounded-full p-3 mb-2 transform -translate-y-2 scholar-shadow" href="#">
+<span class="material-symbols-outlined" data-icon="edit_note" style="font-variation-settings: 'FILL' 1;">edit_note</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider mt-1">Homework</span>
+</a>
+<!-- Progress -->
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="auto_graph">auto_graph</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Progress</span>
+</a>
+<!-- Settings -->
+<a class="flex flex-col items-center justify-center text-[#161c24]/60 p-2 hover:text-[#002c98] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="settings">settings</span>
+<span class="font-inter font-medium text-[10px] uppercase tracking-wider">Settings</span>
+</a>
+</nav>
+</body></html>

@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Academic Architect | Community Feed</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;600;700;800&amp;family=Public+Sans:wght@400;500;600&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#88d982",
+                        "secondary-container": "#a0f399",
+                        "tertiary-fixed": "#69ff87",
+                        "on-tertiary-fixed-variant": "#00531e",
+                        "on-tertiary": "#ffffff",
+                        "on-secondary": "#ffffff",
+                        "surface-container-highest": "#dde3ee",
+                        "on-primary-container": "#b2bfff",
+                        "surface-container-high": "#e3e8f4",
+                        "primary-fixed-dim": "#b7c4ff",
+                        "surface-tint": "#2f53ce",
+                        "primary-container": "#1a43bf",
+                        "inverse-primary": "#b7c4ff",
+                        "inverse-on-surface": "#ecf1fc",
+                        "tertiary-fixed-dim": "#3ce36a",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#001453",
+                        "on-background": "#161c24",
+                        "tertiary": "#004317",
+                        "on-surface": "#161c24",
+                        "surface-container-lowest": "#ffffff",
+                        "surface-container-low": "#eef4ff",
+                        "on-secondary-fixed": "#002204",
+                        "secondary-fixed": "#a3f69c",
+                        "surface-bright": "#f8f9ff",
+                        "outline": "#747685",
+                        "on-primary": "#ffffff",
+                        "surface-container": "#e9eef9",
+                        "primary": "#002c98",
+                        "on-secondary-fixed-variant": "#005312",
+                        "on-tertiary-container": "#35de66",
+                        "on-primary-fixed-variant": "#0438b6",
+                        "secondary": "#1b6d24",
+                        "outline-variant": "#c4c5d6",
+                        "on-secondary-container": "#217128",
+                        "on-surface-variant": "#444654",
+                        "surface-variant": "#dde3ee",
+                        "on-error": "#ffffff",
+                        "background": "#f8f9ff",
+                        "surface-dim": "#d5dae5",
+                        "on-tertiary-fixed": "#002108",
+                        "tertiary-container": "#005d22",
+                        "on-error-container": "#93000a",
+                        "error-container": "#ffdad6",
+                        "surface": "#f8f9ff",
+                        "primary-fixed": "#dde1ff",
+                        "inverse-surface": "#2b3139"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "fontFamily": {
+                        "headline": ["Manrope"],
+                        "body": ["Public Sans"],
+                        "label": ["Inter"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        body { font-family: 'Public Sans', sans-serif; }
+        h1, h2, h3 { font-family: 'Manrope', sans-serif; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface min-h-screen">
+<header class="fixed top-0 w-full z-50 bg-[#f8f9ff]/80 backdrop-blur-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] flex justify-between items-center px-6 py-4">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full overflow-hidden bg-surface-container-high ring-2 ring-primary/10">
+<img alt="Student Profile" class="w-full h-full object-cover" data-alt="close-up portrait of a scholarly young student with a focused expression in a brightly lit library setting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCevruyRmP81zUwP79IKNOtcsXxO2VK_UlmSq5WiE5ek6rQnlQJ83FLBhlqyC1Yv3WxeQMpUoFaVQCq9BoTxOg_Tz64L_6iI9kIoO1CUPSyRwBxrUqDa67qyX5px_n5sCkMlGeisJgJGl9BUaMt2BKxittgKEWYidFsiLwzqR2qzLbGp78KZ4ZkigPQmhtFhUOVbkBXGoGhzgafbwwgH326LDJijB66bpqAWtKgLV6vLWJG_KoKnnfVLOzfa23ft4hxAKidjS3vTSQ"/>
+</div>
+<span class="text-xl font-extrabold text-[#002c98] uppercase tracking-widest font-headline">Academic Architect</span>
+</div>
+<div class="flex items-center gap-4">
+<button class="text-[#002c98] hover:opacity-80 transition-opacity">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+</div>
+</header>
+<main class="pt-24 pb-32 px-6 max-w-5xl mx-auto">
+<div class="mb-10">
+<h1 class="text-3xl font-bold tracking-tight text-primary mb-2">Community Feed</h1>
+<p class="text-on-surface-variant font-body">Connect with scholars worldwide. Review essays, listen to speaking mocks, and grow together.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<div class="md:col-span-8 space-y-8">
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] overflow-hidden transition-all hover:translate-y-[-2px]">
+<div class="h-1 bg-gradient-to-r from-primary to-secondary w-full"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-xl bg-primary-fixed overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="professional male portrait with warm lighting, academic background, neutral aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDWx-gN3xRbtIYCsU1dZDz0r7Sj-c6UuDYVlHDGIsdpRuecipgiE7VgYd6fPgAbxWxGWfwXzYrBtzljOK3htv0aUEL9mqr0vOZmK6tLCeioboEAAB1zX2rIVZ70U7N0ZeAdgyfm2lpLY5-mTPhkJvtS8HObak0D7Ni-dqZxDzsBTKoY15-1JxSW71cPwXvRCUyAd-yPxpiwulyoCL9sS-WqK6A4CltVJzVzwuRjU9Cu79pt386vLZfCnnVjkf2g6yN0IR1PK3vu7f8"/>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-none">Marcus Thorne</h3>
+<p class="text-sm font-label text-on-surface-variant mt-1">Writing Task 2 • 2 hours ago</p>
+</div>
+</div>
+<div class="bg-secondary-container text-on-secondary-container px-4 py-2 rounded-full flex flex-col items-center">
+<span class="text-xs font-label font-bold uppercase tracking-tighter">Band</span>
+<span class="text-xl font-headline font-extrabold">8.0</span>
+</div>
+</div>
+<div class="space-y-4">
+<h2 class="text-xl font-bold font-headline leading-snug">The Impact of Urbanization on Traditional Architecture</h2>
+<p class="text-on-surface-variant leading-relaxed line-clamp-3 italic">
+                                "In the modern era, the rapid expansion of megacities has led to a significant homogenization of urban landscapes. This essay argues that while globalization promotes economic efficiency, it concurrently erodes the cultural fabric preserved in historical edifices..."
+                            </p>
+<div class="flex gap-2">
+<span class="bg-surface-container-high text-primary text-xs font-label font-semibold px-3 py-1 rounded-full">Academic Writing</span>
+<span class="bg-surface-container-high text-primary text-xs font-label font-semibold px-3 py-1 rounded-full">Task 2</span>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high flex justify-between items-center">
+<div class="flex gap-6">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label text-sm font-semibold">124</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label text-sm font-semibold">18</span>
+</button>
+</div>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+<article class="bg-surface-container-lowest rounded-xl shadow-[0_8px_24px_-4px_rgba(22,28,36,0.06)] overflow-hidden transition-all hover:translate-y-[-2px]">
+<div class="h-1 bg-secondary w-full"></div>
+<div class="p-6">
+<div class="flex justify-between items-start mb-6">
+<div class="flex gap-4 items-center">
+<div class="w-12 h-12 rounded-xl bg-secondary-fixed overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="cheerful young woman with glasses and books in a modern minimalist workspace" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDf7qXsvrkyODGZO-rJ8fhaZ4XAzZhM1vBgttbr63GCKizIq1k4f86TLTWHj4LZ3lkh1yUeUfUIlZH1lPNe-ANbpPlRPquraZhIY4uqSEPTsSxAoOEiOcG_GoVxnuseRPWh2bAnRW1mWJSRhwvORzCfvhXT0nYeE-ghE3DL7u9fTuD5VcP1ecaLffaGAfxW9-1DtIMKfK3yFclUcrZ9pGU06z7Gvfus23OveSLWF8KCdlG7KIzRfwomlIgHRtEY795DTptvNuS8kV0"/>
+</div>
+<div>
+<h3 class="font-bold text-lg leading-none">Elena Rodriguez</h3>
+<p class="text-sm font-label text-on-surface-variant mt-1">Speaking Part 3 • 4 hours ago</p>
+</div>
+</div>
+<div class="bg-primary-container text-white px-4 py-2 rounded-full flex flex-col items-center">
+<span class="text-xs font-label font-bold uppercase tracking-tighter opacity-80">Band</span>
+<span class="text-xl font-headline font-extrabold">7.5</span>
+</div>
+</div>
+<div class="bg-surface-container-low rounded-xl p-4 mb-6 flex items-center gap-4">
+<button class="w-12 h-12 rounded-full bg-primary text-white flex items-center justify-center shadow-lg active:scale-95 transition-transform">
+<span class="material-symbols-outlined" data-icon="play_arrow" style="font-variation-settings: 'FILL' 1;">play_arrow</span>
+</button>
+<div class="flex-1">
+<div class="h-1.5 w-full bg-surface-container-highest rounded-full overflow-hidden">
+<div class="h-full bg-primary w-1/3"></div>
+</div>
+<div class="flex justify-between mt-2">
+<span class="text-[10px] font-label font-bold text-on-surface-variant">0:45 / 2:14</span>
+<span class="text-[10px] font-label font-bold text-on-surface-variant">Topic: Technology &amp; Education</span>
+</div>
+</div>
+</div>
+<div class="mt-8 pt-6 border-t border-surface-container-high flex justify-between items-center">
+<div class="flex gap-6">
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="favorite">favorite</span>
+<span class="font-label text-sm font-semibold">89</span>
+</button>
+<button class="flex items-center gap-2 text-on-surface-variant hover:text-primary transition-colors">
+<span class="material-symbols-outlined" data-icon="chat_bubble">chat_bubble</span>
+<span class="font-label text-sm font-semibold">32</span>
+</button>
+</div>
+<button class="text-primary hover:bg-primary-fixed p-2 rounded-full transition-all">
+<span class="material-symbols-outlined" data-icon="bookmark">bookmark</span>
+</button>
+</div>
+</div>
+</article>
+</div>
+<aside class="hidden md:block md:col-span-4 space-y-8">
+<div class="bg-primary-container rounded-3xl p-8 text-white shadow-xl relative overflow-hidden">
+<div class="absolute -right-4 -top-4 opacity-10">
+<span class="material-symbols-outlined text-9xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h2 class="text-2xl font-bold font-headline mb-4 leading-tight">Weekly Challenge</h2>
+<p class="text-sm font-body opacity-90 mb-6 leading-relaxed">Share your take on "Renewable Energy Economics" and get a chance to be reviewed by a Band 9 mentor.</p>
+<button class="w-full bg-white text-primary font-bold py-3 rounded-full hover:bg-surface transition-colors shadow-lg active:scale-95">Enter Now</button>
+</div>
+<div class="bg-surface-container-low rounded-3xl p-6">
+<h3 class="text-lg font-bold font-headline mb-6 text-primary flex items-center gap-2">
+<span class="material-symbols-outlined" data-icon="trending_up">trending_up</span>
+                        Trending Scholars
+                    </h3>
+<div class="space-y-6">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="clean minimal portrait of a man in professional attire against a soft neutral background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDH7YTCuXsLLqJUCCmGgmVOynul39a4eY_AnKMdrNB08sRsz_E0acgTcXF_3hYqNxZGtvNhW8QvEKKnz-uG0DwSfnpoXWjxGbe6FAVIWQVVvZTInl3QNxt1xrCk7qEhW-vyxNo_GbG8RFkXqVvbj0BpYxynNBcc8qV1xgMGOnnE9UMSInLwaGxpbAEbADkZ04QLNCuXpXTJ0-Feaa4ZA7uQxdV8g7cDCcEDEn4-J_XkHa545VdN4TjSN5h0yWi17xZr0hYxxF7TB-k"/>
+</div>
+<span class="font-bold text-sm">Julian R.</span>
+</div>
+<span class="text-xs font-label font-bold text-secondary">Band 8.5</span>
+</div>
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest overflow-hidden">
+<img alt="Avatar" class="w-full h-full object-cover" data-alt="elegant female portrait with soft natural lighting and scholarly vibe" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBkV-En3UuUQHT4nu5W72tHxpWArDnosQrHKBdZiz_VlWYG4xKX1FNi-FBCwCJ68qvgwpmIMG8urZ0bgIX9DQH0JBv_WADYVoXfGEYncrhxEFXybyr6lMDhX2fCsUtMrXGq9hjSeRzGEBrvqR7L9miIoh2zBu2nE2Q3zR3DfnqTGrE_se0cQAeVtw6nKLUh-neCwBHsb2EoFMmYBCdzqcfSfgbTQ8fx_y_-ro4oqHuTvQQcxUWSY53J3IGl6aXQuHgGIxnLzr3wAWw"/>
+</div>
+<span class="font-bold text-sm">Amara K.</span>
+</div>
+<span class="text-xs font-label font-bold text-secondary">Band 9.0</span>
+</div>
+</div>
+</div>
+</aside>
+</div>
+</main>
+<button class="fixed bottom-24 right-6 w-16 h-16 bg-gradient-to-tr from-primary to-primary-container text-white rounded-full shadow-[0_8px_24px_-4px_rgba(22,28,36,0.3)] flex items-center justify-center z-50 hover:scale-105 active:scale-95 transition-all">
+<span class="material-symbols-outlined text-3xl" data-icon="add">add</span>
+</button>
+<nav class="fixed bottom-0 left-0 w-full flex justify-around items-end px-4 pb-6 pt-2 bg-white/90 backdrop-blur-2xl shadow-[0_-8px_24px_-4px_rgba(22,28,36,0.06)] z-50 rounded-t-[1.5rem]">
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="home_app_logo">home_app_logo</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Sanctuary</span>
+</a>
+<a class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#002c98] to-[#1a43bf] text-white rounded-full p-3 mb-1 shadow-lg active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" data-icon="groups">groups</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter hidden">Feed</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="psychology_alt">psychology_alt</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Mentor</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="mic_external_on">mic_external_on</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Speech</span>
+</a>
+<a class="flex flex-col items-center justify-center text-[#919eab] p-2 hover:text-[#1b6d24] transition-colors" href="#">
+<span class="material-symbols-outlined mb-1" data-icon="insights">insights</span>
+<span class="font-['Inter'] text-[10px] font-semibold uppercase tracking-tighter">Stats</span>
+</a>
+</nav>
+</body></html>
